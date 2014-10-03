@@ -22,25 +22,33 @@ namespace Software
        
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure???", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                con.Open();
-                SqlCommand cmd1 = new SqlCommand("DELETE FROM StudentDetails WHERE RegNo=@reg_no", con);
-                SqlCommand cmd2 = new SqlCommand("DELETE FROM FamilyDetails WHERE RegNo=@reg_no",con);
+                if (MessageBox.Show("Are you sure???", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand cmd1 = new SqlCommand("DELETE FROM StudentDetails WHERE RegNo=@reg_no", con);
+                    SqlCommand cmd2 = new SqlCommand("DELETE FROM FamilyDetails WHERE RegNo=@reg_no", con);
 
-                cmd1.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
-                cmd2.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
+                    cmd1.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
+                    cmd2.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
+                    cmd1.ExecuteNonQuery();
+                    cmd2.ExecuteNonQuery();
 
-                con.Close();
-                MessageBox.Show("Record is deleted!!", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Reset();
+                    con.Close();
+                    MessageBox.Show("Record is deleted!!", "confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Reset();
+                }
+            }
+            catch (Exception ex)
+            {
+                { MessageBox.Show("Input Error", "Error message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
 
         private void Delete_Load(object sender, EventArgs e)
         {
+
             con.Open();
             SqlCommand myCommand = new SqlCommand("SELECT RegNo FROM StudentDetails", con);
             SqlDataReader myReader = myCommand.ExecuteReader();
@@ -57,6 +65,7 @@ namespace Software
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            button1.Enabled = true;
             con.Open();
             SqlCommand myCommand = new SqlCommand("SELECT * FROM StudentDetails WHERE RegNo=@reg_no", con);
             myCommand.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());

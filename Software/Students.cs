@@ -27,7 +27,9 @@ namespace Software
 
         private void Students_Load(object sender, EventArgs e)
         {
-            
+            dataGridView1.EnableHeadersVisualStyles = false;
+           //dataGridView1.b
+            // dataGridView1.cells
             if (Login.usr == 1)
             {
                 btnUpdate.Visible = false;

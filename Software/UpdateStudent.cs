@@ -22,44 +22,53 @@ namespace Software
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand myCommand = new SqlCommand("UPDATE StudentDetails SET Title=@title,FirstName=@first_name,LastName=@last_name,religion=@religion,Language=@mother_language,PermanantAddress=@permenent_address,Gender=@gender,NIC_No=@nic_num,ContactNumber=@contact_num,DateofBirth=@date_of_birth,AcedemicCourse=@academic_course,AcedemicYear=@academic_year,Hostel=@hostel_facilities,IndoorGames=@indoor_game,Athletics=@athletics,MajorGames=@major_games,Cultural=@cultural,EmailAddress=@email_address,FacebookId=@facebook_id,Status=@status WHERE RegNo=@reg_no", con);
+            try
+            {
+                con.Open();
+                SqlCommand myCommand = new SqlCommand("UPDATE StudentDetails SET Title=@title,FirstName=@first_name,LastName=@last_name,religion=@religion,Language=@mother_language,PermanantAddress=@permenent_address,Gender=@gender,NIC_No=@nic_num,ContactNumber=@contact_num,DateofBirth=@date_of_birth,AcedemicCourse=@academic_course,AcedemicYear=@academic_year,Hostel=@hostel_facilities,IndoorGames=@indoor_game,Athletics=@athletics,MajorGames=@major_games,Cultural=@cultural,EmailAddress=@email_address,FacebookId=@facebook_id,Status=@status WHERE RegNo=@reg_no", con);
 
-            myCommand.Parameters.AddWithValue("@title", comboBox7.Text.ToString());
-            myCommand.Parameters.AddWithValue("@first_name", txtFirstName.Text.ToString());
-            myCommand.Parameters.AddWithValue("@last_name", txtLastName.Text.ToString());
-            myCommand.Parameters.AddWithValue("@religion", comboBox8.Text.ToString());
-            myCommand.Parameters.AddWithValue("@mother_language", comboBox9.Text.ToString());
-            myCommand.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
-            myCommand.Parameters.AddWithValue("@permenent_address", txtAddress.Text.ToString());
-            myCommand.Parameters.AddWithValue("@gender", comboBox10.Text.ToString());
-            myCommand.Parameters.AddWithValue("@nic_num", txtNIC.Text.ToString());
-            myCommand.Parameters.AddWithValue("@contact_num", txtContactNo.Text.ToString());
-            myCommand.Parameters.AddWithValue("@date_of_birth", dateTimePicker1.Text.ToString());
-            myCommand.Parameters.AddWithValue("@academic_course", comboBox11.Text.ToString());
-            myCommand.Parameters.AddWithValue("@academic_year", comboBox12.Text.ToString());
-            if (radioButton1.Checked)
-                myCommand.Parameters.AddWithValue("@hostel_facilities", txtRoomNo.Text.ToString());
-            else if (radioButton2.Checked)
-                myCommand.Parameters.AddWithValue("@hostel_facilities", radioButton2.Text.ToString());
-            myCommand.Parameters.AddWithValue("@indoor_game", richTextBox1.Text.ToString());
-            myCommand.Parameters.AddWithValue("@athletics", richTextBox2.Text.ToString());
-            myCommand.Parameters.AddWithValue("@major_games", richTextBox3.Text.ToString());
-            myCommand.Parameters.AddWithValue("@cultural", richTextBox4.Text.ToString());
-            myCommand.Parameters.AddWithValue("@email_address", textBox57.Text.ToString());
-            myCommand.Parameters.AddWithValue("@facebook_id", textBox56.Text.ToString());
-            myCommand.Parameters.AddWithValue("@status", comboBox1.Text.ToString());
-           
+                myCommand.Parameters.AddWithValue("@title", comboBox7.Text.ToString());
+                myCommand.Parameters.AddWithValue("@first_name", txtFirstName.Text.ToString());
+                myCommand.Parameters.AddWithValue("@last_name", txtLastName.Text.ToString());
+                myCommand.Parameters.AddWithValue("@religion", comboBox8.Text.ToString());
+                myCommand.Parameters.AddWithValue("@mother_language", comboBox9.Text.ToString());
+                myCommand.Parameters.AddWithValue("@reg_no", comboBox2.Text.ToString());
+                myCommand.Parameters.AddWithValue("@permenent_address", txtAddress.Text.ToString());
+                myCommand.Parameters.AddWithValue("@gender", comboBox10.Text.ToString());
+                myCommand.Parameters.AddWithValue("@nic_num", txtNIC.Text.ToString());
+                myCommand.Parameters.AddWithValue("@contact_num", txtContactNo.Text.ToString());
+                myCommand.Parameters.AddWithValue("@date_of_birth", dateTimePicker1.Text.ToString());
+                myCommand.Parameters.AddWithValue("@academic_course", comboBox11.Text.ToString());
+                myCommand.Parameters.AddWithValue("@academic_year", comboBox12.Text.ToString());
+                if (radioButton1.Checked)
+                    myCommand.Parameters.AddWithValue("@hostel_facilities", txtRoomNo.Text.ToString());
+                else if (radioButton2.Checked)
+                    myCommand.Parameters.AddWithValue("@hostel_facilities", radioButton2.Text.ToString());
+                myCommand.Parameters.AddWithValue("@indoor_game", richTextBox1.Text.ToString());
+                myCommand.Parameters.AddWithValue("@athletics", richTextBox2.Text.ToString());
+                myCommand.Parameters.AddWithValue("@major_games", richTextBox3.Text.ToString());
+                myCommand.Parameters.AddWithValue("@cultural", richTextBox4.Text.ToString());
+                myCommand.Parameters.AddWithValue("@email_address", textBox57.Text.ToString());
+                myCommand.Parameters.AddWithValue("@facebook_id", textBox56.Text.ToString());
+                myCommand.Parameters.AddWithValue("@status", comboBox1.Text.ToString());
 
-            myCommand.ExecuteNonQuery();
-            con.Close();
 
-            MessageBox.Show("Successfully Updated!!!");
-            Reset();
+                myCommand.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Successfully Updated!!!");
+                Reset();
+            }
+            catch (Exception ex)
+            { MessageBox.Show("Input Error", "Error message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
                      
         private void UpdateStudent_Load(object sender, EventArgs e)
         {
+            tabPage1.Text = "Page 1";
+            tabPage2.Text = "Page 2";
+            tabPage3.Text = "Page 3";
+            tabPage5.Text = "Page 4";
             con.Open();
             SqlCommand cmd = new SqlCommand("Select RegNo from StudentDetails", con);
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -158,6 +167,21 @@ namespace Software
             {
                 rs.TopMost = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

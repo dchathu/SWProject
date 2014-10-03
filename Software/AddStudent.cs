@@ -42,53 +42,57 @@ namespace Software
             if (radioButton6.Checked)
                 mt = radioButton6.Text.ToString();
             else if (radioButton5.Checked)
-                mt = radioButton5.Text.ToString();   
-            
-            con.Open();
+                mt = radioButton5.Text.ToString();
+            try
+            {
+                con.Open();
 
-            da = new SqlDataAdapter();
-            daf = new SqlDataAdapter();
-            da.InsertCommand=new SqlCommand("INSERT INTO StudentDetails (Title,FirstName,LastName,Religion,Language,RegNo,PermanantAddress,Gender,NIC_No,ContactNumber,DateofBirth,AcedemicCourse,AcedemicYear,Hostel,School,AL_Results,IndoorGames,Athletics,MajorGames,Cultural,District,EmailAddress,FacebookId,MedicalTreatment,Status)VALUES (@title,@first_name,@last_name,@religion,@mother_language,@reg_no,@permenent_address,@gender,@nic_num,@contact_num,@date_of_birth,@academic_course,@academic_year,@hostel_facilities,@school_attended,@al_results,@indoor_game,@athletics,@major_games,@cultural,@district,@email_address,@facebook_id,@medical_treatment,@status)", con);
-            
-            da.InsertCommand.Parameters.AddWithValue("@title", comboBox7.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@first_name", txtFirstName.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@last_name", txtLastName.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@religion", comboBox8.SelectedItem.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@mother_language", comboBox9.SelectedItem.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@reg_no", txtRegNo.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@permenent_address", txtAddress.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@gender", comboBox10.SelectedItem.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@nic_num", txtNIC.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@contact_num", txtContactNo.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@date_of_birth", dateTimePicker1.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@academic_course", comboBox11.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@academic_year", comboBox12.SelectedItem.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@hostel_facilities", hostelfacility);
-            da.InsertCommand.Parameters.AddWithValue("@school_attended", textBox1.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@al_results", comboBox1.SelectedItem.ToString() + comboBox5.SelectedItem.ToString() + comboBox3.SelectedItem.ToString() + comboBox4.SelectedItem.ToString() + comboBox2.SelectedItem.ToString() + comboBox6.SelectedItem.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@indoor_game", richTextBox1.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@athletics", richTextBox2.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@major_games", richTextBox3.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@cultural", richTextBox4.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@district", textBox59.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@email_address", textBox57.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@facebook_id", textBox56.Text.ToString());
-            da.InsertCommand.Parameters.AddWithValue("@medical_treatment", mt);
-            da.InsertCommand.Parameters.AddWithValue("@status", "Following");
+                da = new SqlDataAdapter();
+                daf = new SqlDataAdapter();
+                da.InsertCommand = new SqlCommand("INSERT INTO StudentDetails (Title,FirstName,LastName,Religion,Language,RegNo,PermanantAddress,Gender,NIC_No,ContactNumber,DateofBirth,AcedemicCourse,AcedemicYear,Hostel,School,AL_Results,IndoorGames,Athletics,MajorGames,Cultural,District,EmailAddress,FacebookId,MedicalTreatment,Status)VALUES (@title,@first_name,@last_name,@religion,@mother_language,@reg_no,@permenent_address,@gender,@nic_num,@contact_num,@date_of_birth,@academic_course,@academic_year,@hostel_facilities,@school_attended,@al_results,@indoor_game,@athletics,@major_games,@cultural,@district,@email_address,@facebook_id,@medical_treatment,@status)", con);
 
-            da.InsertCommand.ExecuteNonQuery();
+                da.InsertCommand.Parameters.AddWithValue("@title", comboBox7.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@first_name", txtFirstName.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@last_name", txtLastName.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@religion", comboBox8.SelectedItem.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@mother_language", comboBox9.SelectedItem.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@reg_no", txtRegNo.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@permenent_address", txtAddress.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@gender", comboBox10.SelectedItem.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@nic_num", txtNIC.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@contact_num", txtContactNo.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@date_of_birth", dateTimePicker1.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@academic_course", comboBox11.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@academic_year", comboBox12.SelectedItem.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@hostel_facilities", hostelfacility);
+                da.InsertCommand.Parameters.AddWithValue("@school_attended", textBox1.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@al_results", comboBox1.SelectedItem.ToString() + comboBox5.SelectedItem.ToString() + comboBox3.SelectedItem.ToString() + comboBox4.SelectedItem.ToString() + comboBox2.SelectedItem.ToString() + comboBox6.SelectedItem.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@indoor_game", richTextBox1.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@athletics", richTextBox2.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@major_games", richTextBox3.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@cultural", richTextBox4.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@district", textBox59.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@email_address", textBox57.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@facebook_id", textBox56.Text.ToString());
+                da.InsertCommand.Parameters.AddWithValue("@medical_treatment", mt);
+                da.InsertCommand.Parameters.AddWithValue("@status", "Following");
 
-            daf.InsertCommand=new SqlCommand("INSERT INTO FamilyDetails (RegNo,Name,Age,Relationship,Job,Salery) VALUES(@reg_no,@name,@age,@relationship,@job,@salary)", con);
-            
-            daf.InsertCommand.Parameters.AddWithValue("@reg_no", txtRegNo.Text.ToString());
-            daf.InsertCommand.Parameters.AddWithValue("@name", txtNameFam.Text.ToString());
-            daf.InsertCommand.Parameters.AddWithValue("@age", txtAgeFam.Text.ToString());
-            daf.InsertCommand.Parameters.AddWithValue("@relationship", cmbRelation.Text.ToString());
-            daf.InsertCommand.Parameters.AddWithValue("@job", txtJobFam.Text.ToString());
-            daf.InsertCommand.Parameters.AddWithValue("@salary", txtSalaryFam.Text.ToString());
-            con.Close();
-            MessageBox.Show("Successfully added!!!");
-             Reset();
+                da.InsertCommand.ExecuteNonQuery();
+
+                daf.InsertCommand = new SqlCommand("INSERT INTO FamilyDetails (RegNo,Name,Age,Relationship,Job,Salery) VALUES(@reg_no,@name,@age,@relationship,@job,@salary)", con);
+
+                daf.InsertCommand.Parameters.AddWithValue("@reg_no", txtRegNo.Text.ToString());
+                daf.InsertCommand.Parameters.AddWithValue("@name", txtNameFam.Text.ToString());
+                daf.InsertCommand.Parameters.AddWithValue("@age", txtAgeFam.Text.ToString());
+                daf.InsertCommand.Parameters.AddWithValue("@relationship", cmbRelation.Text.ToString());
+                daf.InsertCommand.Parameters.AddWithValue("@job", txtJobFam.Text.ToString());
+                daf.InsertCommand.Parameters.AddWithValue("@salary", txtSalaryFam.Text.ToString());
+                con.Close();
+                MessageBox.Show("Successfully added!!!");
+                Reset();
+            }
+            catch (Exception ex)
+            { MessageBox.Show("Input Error", "Error message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         #endregion
 
@@ -335,12 +339,19 @@ namespace Software
 
         private void txtRegNo_TextChanged(object sender, EventArgs e)
         {
-
+            btnAddAnother.Enabled = true;
         }
 
         private void AddStudent_Load(object sender, EventArgs e)
         {
+            tabPage1.Text = "Page 1";
+            tabPage2.Text = "Page 2";
+            tabPage3.Text = "Page 3";
+            tabPage5.Text = "Page 4";
+            tabPage6.Text = "Page 5";
 
+            btnAddAnother.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void txtContactNo_Validated(object sender, EventArgs e)
@@ -371,6 +382,21 @@ namespace Software
             {
                 errorProvider2.Clear();
             }
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtNameFam_TextChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = true;
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
