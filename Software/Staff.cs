@@ -53,7 +53,7 @@ namespace Software
 
         public void LoadStaff()
         {
-            textBox1.Text = "Search staff by Name or Staff ID";
+            textBox1.Text = "Start search with waht you know...";
             con.Open();
             da = new SqlDataAdapter();
             da.SelectCommand = new SqlCommand("SELECT Title,First_Name,Last_Name,Staff_ID,Contact_No FROM Staff", con);

@@ -29,8 +29,17 @@ namespace Software
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Students s = new Students();
-            s.Show();
+            Students st = (Students)Application.OpenForms["Students"];
+            if (st != null)
+            {
+                st.TopMost = true;
+            }
+            else
+            {
+                Students s = new Students();
+                s.Show();
+            }
+            
         }
 
         private void form_FormClosed(object sender, FormClosedEventArgs e)
@@ -55,14 +64,34 @@ namespace Software
        
         private void button3_Click(object sender, EventArgs e)
         {
-            Inventories s = new Inventories();
-            s.Show();
+            Inventories iv = (Inventories)Application.OpenForms["Inventories"];
+            if (iv != null)
+            {
+                iv.TopMost = true;
+            }
+
+            else
+            {
+                Inventories ivn = new Inventories();
+                ivn.Show();
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Schedule s= new Schedule();
-            s.Show();
+            Schedule sc = (Schedule)Application.OpenForms["Schedule"];
+            if (sc != null)
+            {
+                sc.TopMost = true;
+            }
+
+            else
+            {
+                Schedule s= new Schedule();
+                s.Show();
+            }
+            
         }
         
         private void CoverPage_Load(object sender, EventArgs e)
@@ -83,6 +112,7 @@ namespace Software
             da.SelectCommand.Parameters.AddWithValue("@enDt", dtEn);
 
             DataTable dt = new DataTable();
+            dt.Clear();
             da.Fill(dt);
             con.Close();
             DataTable dtUE = new DataTable();
@@ -115,20 +145,46 @@ namespace Software
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Record s = new Record();
-            s.Show();
+            Record rc = (Record)Application.OpenForms["Record"];
+            if (rc != null)
+            {
+                rc.TopMost = true;
+            }
+            else
+            {
+                Record rcn = new Record();
+                rcn.Show();
+            }
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            LoginRegister s = new LoginRegister();
-            s.Show();
+
+            LoginRegister lg = (LoginRegister)Application.OpenForms["LoginRegister"];
+            if (lg != null)
+            {
+                lg.TopMost = true;
+            }
+            else
+            {
+                LoginRegister lgn = new LoginRegister();
+                lgn.Show();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Gallery s = new Gallery();
-            s.Show();
+            Gallery gl = (Gallery)Application.OpenForms["Gallery"];
+            if (gl != null)
+            {
+                gl.TopMost = true;
+            }
+            else
+            {
+                Gallery gln = new Gallery();
+                gln.Show();
+            }
         }
 
         private void CoverPage_Activated(object sender, EventArgs e)
@@ -138,18 +194,26 @@ namespace Software
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Form1 ac = new Form1();
-            ac.Show();
+            Form1 ac = (Form1)Application.OpenForms["Form1"];
+            if (ac != null)
+            {
+                ac.TopMost = true;
+            }
+            else
+            {
+                Form1 acn = new Form1();
+                acn.Show();
+            }
         }
 
         private void dtpEn_ValueChanged(object sender, EventArgs e)
         {
-            LoadEvents(dtpEn.Value, dtpSt.Value);
+          
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            LoadEvents(dtpSt.Value, dtpEn.Value);
+           
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -166,12 +230,17 @@ namespace Software
 
         private void dtpSt_ValueChanged(object sender, EventArgs e)
         {
-            LoadEvents(dtpEn.Value, dtpSt.Value);
+            
         }
 
         private void CoverPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LoadEvents(dtpSt.Value, dtpEn.Value);
         }       
     }
 }
