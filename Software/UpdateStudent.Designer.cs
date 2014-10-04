@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtRoomNo = new System.Windows.Forms.TextBox();
+            this.lblRoomNo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -80,11 +85,6 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.Family = new System.Windows.Forms.TabControl();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtRoomNo = new System.Windows.Forms.TextBox();
-            this.lblRoomNo = new System.Windows.Forms.Label();
             this.tabPage5.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,12 +108,70 @@
             this.tabPage5.Controls.Add(this.textBox57);
             this.tabPage5.Controls.Add(this.label27);
             this.tabPage5.Controls.Add(this.label28);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(749, 479);
+            this.tabPage5.Size = new System.Drawing.Size(749, 475);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.radioButton2.Location = new System.Drawing.Point(369, 52);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(49, 24);
+            this.radioButton2.TabIndex = 78;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.radioButton1.Location = new System.Drawing.Point(253, 51);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(52, 24);
+            this.radioButton1.TabIndex = 77;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Yes";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label13.Location = new System.Drawing.Point(49, 50);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(198, 20);
+            this.label13.TabIndex = 76;
+            this.label13.Text = "Receiving Hostel Facilities";
+            // 
+            // txtRoomNo
+            // 
+            this.txtRoomNo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomNo.Location = new System.Drawing.Point(570, 50);
+            this.txtRoomNo.Name = "txtRoomNo";
+            this.txtRoomNo.Size = new System.Drawing.Size(42, 23);
+            this.txtRoomNo.TabIndex = 75;
+            this.txtRoomNo.Visible = false;
+            // 
+            // lblRoomNo
+            // 
+            this.lblRoomNo.AutoSize = true;
+            this.lblRoomNo.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomNo.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblRoomNo.Location = new System.Drawing.Point(480, 54);
+            this.lblRoomNo.Name = "lblRoomNo";
+            this.lblRoomNo.Size = new System.Drawing.Size(81, 20);
+            this.lblRoomNo.TabIndex = 74;
+            this.lblRoomNo.Text = "Room No";
+            this.lblRoomNo.Visible = false;
             // 
             // button1
             // 
@@ -220,10 +278,10 @@
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(749, 479);
+            this.tabPage3.Size = new System.Drawing.Size(749, 475);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -340,10 +398,10 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.lblContactNo);
             this.tabPage2.Controls.Add(this.lblNIC);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(749, 479);
+            this.tabPage2.Size = new System.Drawing.Size(749, 475);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -518,10 +576,10 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblLastName);
             this.tabPage1.Controls.Add(this.lblFirstName);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(749, 479);
+            this.tabPage1.Size = new System.Drawing.Size(749, 475);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -713,73 +771,17 @@
             // 
             // Family
             // 
+            this.Family.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.Family.Controls.Add(this.tabPage1);
             this.Family.Controls.Add(this.tabPage2);
             this.Family.Controls.Add(this.tabPage3);
             this.Family.Controls.Add(this.tabPage5);
+            this.Family.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Family.Location = new System.Drawing.Point(1, 3);
             this.Family.Name = "Family";
             this.Family.SelectedIndex = 0;
             this.Family.Size = new System.Drawing.Size(757, 505);
             this.Family.TabIndex = 1;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radioButton2.Location = new System.Drawing.Point(369, 52);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 24);
-            this.radioButton2.TabIndex = 78;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.radioButton1.Location = new System.Drawing.Point(253, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 24);
-            this.radioButton1.TabIndex = 77;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Yes";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(49, 50);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(198, 20);
-            this.label13.TabIndex = 76;
-            this.label13.Text = "Receiving Hostel Facilities";
-            // 
-            // txtRoomNo
-            // 
-            this.txtRoomNo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNo.Location = new System.Drawing.Point(570, 50);
-            this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.Size = new System.Drawing.Size(42, 23);
-            this.txtRoomNo.TabIndex = 75;
-            this.txtRoomNo.Visible = false;
-            // 
-            // lblRoomNo
-            // 
-            this.lblRoomNo.AutoSize = true;
-            this.lblRoomNo.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomNo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblRoomNo.Location = new System.Drawing.Point(480, 54);
-            this.lblRoomNo.Name = "lblRoomNo";
-            this.lblRoomNo.Size = new System.Drawing.Size(81, 20);
-            this.lblRoomNo.TabIndex = 74;
-            this.lblRoomNo.Text = "Room No";
-            this.lblRoomNo.Visible = false;
             // 
             // UpdateStudent
             // 

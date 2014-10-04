@@ -133,5 +133,26 @@ namespace Software
             txtTrnsDisc.Text = string.Empty;
         }
 
+        private void txtAmount_Validating(object sender, CancelEventArgs e)
+        {
+            string x = txtAmount.Text.ToString();
+            if (check_number(x))
+                errorProvider1.SetError(txtAmount, "only enter numbers");
+            else
+                errorProvider1.Clear();
+        }
+        public Boolean check_number(string s)
+        {
+            Boolean flag = false;
+            foreach (char c in s)
+            {
+                if (char.IsLetter(c))
+                {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }
     }
 }

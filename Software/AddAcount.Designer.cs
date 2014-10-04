@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtAdAcName = new System.Windows.Forms.TextBox();
             this.cmbAdAcType = new System.Windows.Forms.ComboBox();
             this.txtAdAcNum = new System.Windows.Forms.TextBox();
             this.txtAdAcIniBal = new System.Windows.Forms.TextBox();
             this.txtAdAcDisc = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,6 +50,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddStaff = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -56,6 +58,7 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAdAcName
@@ -85,6 +88,7 @@
             this.txtAdAcNum.Name = "txtAdAcNum";
             this.txtAdAcNum.Size = new System.Drawing.Size(237, 20);
             this.txtAdAcNum.TabIndex = 13;
+            this.txtAdAcNum.Validating += new System.ComponentModel.CancelEventHandler(this.txtAdAcNum_Validating);
             // 
             // txtAdAcIniBal
             // 
@@ -92,6 +96,7 @@
             this.txtAdAcIniBal.Name = "txtAdAcIniBal";
             this.txtAdAcIniBal.Size = new System.Drawing.Size(237, 20);
             this.txtAdAcIniBal.TabIndex = 14;
+            this.txtAdAcIniBal.Validating += new System.ComponentModel.CancelEventHandler(this.txtAdAcIniBal_Validating);
             // 
             // txtAdAcDisc
             // 
@@ -120,6 +125,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(542, 369);
             this.panel1.TabIndex = 38;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(14, 220);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Discription :";
             // 
             // panel2
             // 
@@ -177,15 +191,6 @@
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 6;
             this.label12.Text = "Account Type";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 220);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Discription :";
             // 
             // panel7
             // 
@@ -272,6 +277,10 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddAcount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +302,7 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +330,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnAddStaff;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
