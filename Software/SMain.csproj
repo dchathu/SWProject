@@ -210,6 +210,12 @@
     <Compile Include="Inventories.Designer.cs">
       <DependentUpon>Inventories.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginTemp.Designer.cs">
+      <DependentUpon>LoginTemp.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhotoViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventories.resx">
       <DependentUpon>Inventories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginTemp.resx">
+      <DependentUpon>LoginTemp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Record.resx">
       <DependentUpon>Record.cs</DependentUpon>

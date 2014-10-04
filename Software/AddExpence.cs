@@ -47,13 +47,7 @@ namespace Software
             da.Dispose();
             dt.Clear();
 
-            da = new SqlDataAdapter("SELECT UserName FROM Users", con);
-            da.Fill(dt);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                cmbUsers.Items.Add(row["UserName"].ToString());
-            }
+            
             con.Close();
         }
 
@@ -62,7 +56,6 @@ namespace Software
             txtAmount.Clear();
             txtTrnsDisc.Clear();
             cmbCategry.SelectedIndex = -1;
-            cmbUsers.SelectedIndex = -1;
             dtTransDate.Value = DateTime.Today;
         }
 
@@ -137,7 +130,6 @@ namespace Software
             cmbCategry.Text = string.Empty;
             txtAmount.Text = string.Empty;
             txtTrnsDisc.Text = string.Empty;
-            cmbUsers.Text = string.Empty;
         }
     }
 }

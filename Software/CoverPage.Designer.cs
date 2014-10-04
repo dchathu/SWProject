@@ -47,6 +47,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblToday = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -321,6 +321,16 @@
             this.panel19.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.panel19.Size = new System.Drawing.Size(309, 32);
             this.panel19.TabIndex = 2;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(249, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(53, 23);
+            this.button9.TabIndex = 51;
+            this.button9.Text = "Filter";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label9
             // 
@@ -621,16 +631,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(778, 567);
             this.panel7.TabIndex = 2;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(249, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(53, 23);
-            this.button9.TabIndex = 51;
-            this.button9.Text = "Filter";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // CoverPage
             // 
