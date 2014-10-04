@@ -67,7 +67,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(725, 21);
             this.textBox1.TabIndex = 19;
-            this.textBox1.Text = "Search staff by Name or Staff ID";
+            this.textBox1.Text = "Start search with waht you know...";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
@@ -132,6 +132,7 @@
             this.staffsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.staffsDataGridView.EnableHeadersVisualStyles = false;
             this.staffsDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.staffsDataGridView.MultiSelect = false;
             this.staffsDataGridView.Name = "staffsDataGridView";
             this.staffsDataGridView.ReadOnly = true;
             this.staffsDataGridView.RowHeadersVisible = false;
