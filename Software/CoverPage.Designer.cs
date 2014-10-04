@@ -47,6 +47,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblToday = new System.Windows.Forms.Label();
@@ -71,7 +72,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lnkManageusers = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,7 +106,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(251, 9);
+            this.label2.Location = new System.Drawing.Point(11, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(492, 49);
             this.label2.TabIndex = 3;
@@ -142,6 +145,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.lnkManageusers);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -154,6 +158,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label2);
@@ -168,7 +174,7 @@
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(938, 8);
+            this.label6.Location = new System.Drawing.Point(896, 35);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 7;
@@ -180,7 +186,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(883, 35);
+            this.linkLabel1.Location = new System.Drawing.Point(765, 35);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(110, 17);
             this.linkLabel1.TabIndex = 6;
@@ -321,6 +327,16 @@
             this.panel19.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.panel19.Size = new System.Drawing.Size(309, 32);
             this.panel19.TabIndex = 2;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(249, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(53, 23);
+            this.button9.TabIndex = 51;
+            this.button9.Text = "Filter";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label9
             // 
@@ -622,15 +638,38 @@
             this.panel7.Size = new System.Drawing.Size(778, 567);
             this.panel7.TabIndex = 2;
             // 
-            // button9
+            // label4
             // 
-            this.button9.Location = new System.Drawing.Point(249, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(53, 23);
-            this.button9.TabIndex = 51;
-            this.button9.Text = "Filter";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(765, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Signed in as :";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(859, 13);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(33, 15);
+            this.lblUserName.TabIndex = 9;
+            this.lblUserName.Text = "User";
+            // 
+            // lnkManageusers
+            // 
+            this.lnkManageusers.AutoSize = true;
+            this.lnkManageusers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkManageusers.Location = new System.Drawing.Point(894, 72);
+            this.lnkManageusers.Name = "lnkManageusers";
+            this.lnkManageusers.Size = new System.Drawing.Size(100, 17);
+            this.lnkManageusers.TabIndex = 52;
+            this.lnkManageusers.TabStop = true;
+            this.lnkManageusers.Text = "Manage Users";
+            this.lnkManageusers.Visible = false;
+            this.lnkManageusers.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkManageusers_LinkClicked);
             // 
             // CoverPage
             // 
@@ -648,6 +687,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CoverPage_FormClosing);
             this.Load += new System.EventHandler(this.CoverPage_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -728,5 +768,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgv1;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel lnkManageusers;
     }
 }

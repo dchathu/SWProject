@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -78,12 +78,12 @@
             this.btnMang = new System.Windows.Forms.Button();
             this.pnDtMang = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.pnBtnDock = new System.Windows.Forms.Panel();
             this.btnSelectAcount = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label8 = new System.Windows.Forms.Label();
+            this.lblInfoAc = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -152,9 +152,11 @@
             this.dgvExpense.AllowUserToResizeRows = false;
             this.dgvExpense.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvExpense.BackgroundColor = System.Drawing.Color.White;
+            this.dgvExpense.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvExpense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExpense.EnableHeadersVisualStyles = false;
             this.dgvExpense.Location = new System.Drawing.Point(4, 26);
+            this.dgvExpense.MultiSelect = false;
             this.dgvExpense.Name = "dgvExpense";
             this.dgvExpense.ReadOnly = true;
             this.dgvExpense.RowHeadersVisible = false;
@@ -200,9 +202,11 @@
             this.dgvIncm.AllowUserToResizeRows = false;
             this.dgvIncm.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIncm.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIncm.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvIncm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIncm.EnableHeadersVisualStyles = false;
             this.dgvIncm.Location = new System.Drawing.Point(3, 25);
+            this.dgvIncm.MultiSelect = false;
             this.dgvIncm.Name = "dgvIncm";
             this.dgvIncm.ReadOnly = true;
             this.dgvIncm.RowHeadersVisible = false;
@@ -267,27 +271,27 @@
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 11);
             this.chart1.Name = "chart1";
-            series7.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series7.Color = System.Drawing.SystemColors.Control;
-            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            series7.IsValueShownAsLabel = true;
-            series7.LabelBackColor = System.Drawing.Color.Transparent;
-            series7.LabelBorderColor = System.Drawing.Color.Transparent;
-            series7.LabelForeColor = System.Drawing.Color.White;
-            series7.LabelFormat = "0.00";
-            series7.Legend = "Legend1";
-            series7.MarkerColor = System.Drawing.SystemColors.Control;
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series3.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Color = System.Drawing.SystemColors.Control;
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            series3.IsValueShownAsLabel = true;
+            series3.LabelBackColor = System.Drawing.Color.Transparent;
+            series3.LabelBorderColor = System.Drawing.Color.Transparent;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.LabelFormat = "0.00";
+            series3.Legend = "Legend1";
+            series3.MarkerColor = System.Drawing.SystemColors.Control;
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(367, 495);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -355,6 +359,7 @@
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.MintCream;
             this.flowLayoutPanel6.Controls.Add(this.label2);
             this.flowLayoutPanel6.Controls.Add(this.lbIncome);
+            this.flowLayoutPanel6.Controls.Add(this.lblInfoAc);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -555,7 +560,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(171, 23);
             this.button7.TabIndex = 13;
-            this.button7.Text = "Expense";
+            this.button7.Text = "Add Expense";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -576,7 +581,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(171, 23);
             this.button6.TabIndex = 12;
-            this.button6.Text = "Income";
+            this.button6.Text = "Add Income";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -719,7 +724,6 @@
             // 
             this.pnDtMang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnDtMang.Controls.Add(this.button13);
-            this.pnDtMang.Controls.Add(this.button12);
             this.pnDtMang.Location = new System.Drawing.Point(3, 65);
             this.pnDtMang.Name = "pnDtMang";
             this.pnDtMang.Size = new System.Drawing.Size(177, 65);
@@ -737,7 +741,7 @@
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(2, 29);
+            this.button13.Location = new System.Drawing.Point(1, 21);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(171, 23);
             this.button13.TabIndex = 18;
@@ -745,27 +749,6 @@
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.Control;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.CausesValidation = false;
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(2, 3);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(171, 23);
-            this.button12.TabIndex = 17;
-            this.button12.Text = "Add Users";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // pnBtnDock
             // 
@@ -819,6 +802,19 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "FAS Students\' Union Account Manager";
             this.label8.UseWaitCursor = true;
+            // 
+            // lblInfoAc
+            // 
+            this.lblInfoAc.AutoSize = true;
+            this.lblInfoAc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoAc.ForeColor = System.Drawing.Color.Green;
+            this.lblInfoAc.Location = new System.Drawing.Point(271, 0);
+            this.lblInfoAc.Name = "lblInfoAc";
+            this.lblInfoAc.Padding = new System.Windows.Forms.Padding(2, 6, 2, 2);
+            this.lblInfoAc.Size = new System.Drawing.Size(178, 56);
+            this.lblInfoAc.TabIndex = 3;
+            this.lblInfoAc.Text = "Available Balance : Rs.";
+            this.lblInfoAc.Visible = false;
             // 
             // Form1
             // 
@@ -906,7 +902,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSelectAcount;
         private System.Windows.Forms.Panel panel7;
@@ -927,6 +922,7 @@
         public System.Windows.Forms.DateTimePicker dtpEn;
         public System.Windows.Forms.DateTimePicker dtpSt;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblInfoAc;
     }
 }
 

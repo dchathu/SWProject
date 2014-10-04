@@ -24,10 +24,60 @@ namespace Software
 
         private void btnCnclIncm_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void btnAddIncome_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void AddIncome_Load(object sender, EventArgs e)
+        {
+
+            LoadFields();
+        }
+
+        private void LoadFields()
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT*FROM Categories WHERE CategoryType='Income'", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            
+            foreach (DataRow row in dt.Rows)
+            {
+                cmbCategry.Items.Add(row["Category"].ToString());
+            }
+
+            da.Dispose();
+            dt.Clear();
+
+            da = new SqlDataAdapter("SELECT UserName FROM Users", con);
+            da.Fill(dt);
+
+           
+            con.Close();
+        }
+
+        private void AddIncome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 mf = (Form1)Application.OpenForms["Form1"];
+            if (mf != null)
+            {
+                
+                mf.LoadTransactions(mf.dtpSt.Value, mf.dtpEn.Value);
+                mf.LoadAccounts();
+                mf.TopMost = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
         {
             con.Open();
 
@@ -55,12 +105,12 @@ namespace Software
             cmd.Parameters.AddWithValue("@AcNum", Properties.Settings.Default.SelectedAcNum);
             cmd.Parameters.AddWithValue("@Category", cmbCategry.Text);
             cmd.Parameters.AddWithValue("@Date", dtTransDate.Text);
-            cmd.Parameters.AddWithValue("@UserName", cmbUsers.Text);
+            cmd.Parameters.AddWithValue("@UserName", Properties.Settings.Default.User);
             cmd.Parameters.AddWithValue("@Amount", Convert.ToInt16(txtAmount.Text));
             cmd.Parameters.AddWithValue("@TransDisc", txtTrnsDisc.Text);
 
             cmd.ExecuteNonQuery();
-            
+
             con.Close();
 
             DialogResult dg = MessageBox.Show("Transaction Successfuly added.", "Succes", MessageBoxButtons.OK);
@@ -70,46 +120,17 @@ namespace Software
             }
         }
 
-        private void AddIncome_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            LoadFields();
+            clearFields();
         }
 
-        private void LoadFields()
+        private void clearFields()
         {
-            con.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT*FROM Categories WHERE CategoryType='Income'", con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            
-            foreach (DataRow row in dt.Rows)
-            {
-                cmbCategry.Items.Add(row["Category"].ToString());
-            }
-
-            da.Dispose();
-            dt.Clear();
-
-            da = new SqlDataAdapter("SELECT UserName FROM Users", con);
-            da.Fill(dt);
-
-            foreach (DataRow row in dt.Rows)
-            {
-                cmbUsers.Items.Add(row["UserName"].ToString());
-            }
-            con.Close();
-        }
-
-        private void AddIncome_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Form1 mf = (Form1)Application.OpenForms["Form1"];
-            if (mf != null)
-            {
-                
-                mf.LoadTransactions(mf.dtpSt.Value, mf.dtpEn.Value);
-                mf.LoadAccounts();
-                mf.TopMost = true;
-            }
+            dtTransDate.Value = DateTime.Today;
+            cmbCategry.Text = string.Empty;
+            txtAmount.Text = string.Empty;
+            txtTrnsDisc.Text = string.Empty;
         }
 
     }

@@ -120,8 +120,17 @@ namespace Software
 
         private void button2_Click(object sender, EventArgs e)
         {
-            viewAccounts vac = new viewAccounts();
-            vac.Show();
+            viewAccounts va = (viewAccounts)Application.OpenForms["viewAccounts"];
+            if (va != null)
+            {
+                va.TopMost = true;
+            }
+            else
+            {
+                viewAccounts vac = new viewAccounts();
+                vac.Show();
+            }
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -157,22 +166,39 @@ namespace Software
             if (contextMenuStrip1.Items.Count==1)
             {
                 btnSelectAcount.Text = contextMenuStrip1.Items[0].Text;
+                Properties.Settings.Default.SelectedAc = contextMenuStrip1.Items[0].Text.Trim();
                 getSelectedAcNum();
             }
 
             else if (contextMenuStrip1.Items.Count > 1)
             {
-                if(Properties.Settings.Default.SelectedAc=="")
+                if(Properties.Settings.Default.SelectedAc==string.Empty)
                 {
                     btnSelectAcount.Text = Properties.Settings.Default.SelectedAc.ToString();
                 }
                 else
                     btnSelectAcount.Text = contextMenuStrip1.Items[0].Text;
             }
+            
 
             else
             {
                 btnSelectAcount.Text = "Select Acount";
+            }
+
+
+            if (contextMenuStrip1.Items.Count == 0)
+            {
+                lblInfoAc.Text = "No Accounts Available!";
+                lblInfoAc.Visible = true;
+                lbIncome.Visible = false;
+                label2.Visible = false;
+            }
+            else
+            {
+                lblInfoAc.Visible = false;
+                lbIncome.Visible = true;
+                label2.Visible = true;
             }
         }
 
@@ -209,14 +235,43 @@ namespace Software
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AddIncome adinc = new AddIncome();
-            adinc.Show();
+            if (Properties.Settings.Default.SelectedAc.ToString().Trim() == string.Empty)
+                MessageBox.Show("No Account selected");
+            else
+            {
+                AddIncome ai = (AddIncome)Application.OpenForms["AddIncome"];
+                if (ai != null)
+                {
+                    ai.TopMost = true;
+                }
+                else
+                {
+                    AddIncome adinc = new AddIncome();
+                    adinc.Show();
+                }
+            }
+           
+           
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AddExpence adex = new AddExpence();
-            adex.Show();
+            if (Properties.Settings.Default.SelectedAc.ToString().Trim() == string.Empty)
+                MessageBox.Show("No Account selected");
+            else
+            {
+                AddExpence ae = (AddExpence)Application.OpenForms["AddExpence"];
+                if (ae != null)
+                {
+                    ae.TopMost = true;
+                }
+                else
+                {
+                    AddExpence adex = new AddExpence();
+                    adex.Show();
+                }
+            }
+           
         }
 
         public void LoadTransactions(DateTime stDate,DateTime enDate)
@@ -285,20 +340,48 @@ namespace Software
 
         private void button9_Click(object sender, EventArgs e)
         {
-            IncomeStats istat = new IncomeStats();
-            istat.Show();
+            IncomeStats ist=(IncomeStats)Application.OpenForms["IncomeStats"];
+            if (ist != null)
+            {
+                ist.TopMost = true;
+            }
+            else
+            {
+                IncomeStats istat = new IncomeStats();
+                istat.Show();
+            }
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            ExpenseStats exStat = new ExpenseStats();
-            exStat.Show();
+            ExpenseStats est = (ExpenseStats)Application.OpenForms["ExpenseStats"];
+            if (est != null)
+            {
+                est.TopMost = true;
+            }
+            else
+            {
+                ExpenseStats exStat = new ExpenseStats();
+                exStat.Show();
+            }
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            MnthlyAnalyze sStat = new MnthlyAnalyze();
-            sStat.Show();
+            MnthlyAnalyze mst = (MnthlyAnalyze)Application.OpenForms["MnthlyAnalyze"];
+            if (mst != null)
+            {
+                mst.TopMost = true;
+            }
+            else
+            {
+                MnthlyAnalyze sStat = new MnthlyAnalyze();
+                sStat.Show();
+            }
+
+            
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -309,8 +392,17 @@ namespace Software
 
         private void button13_Click(object sender, EventArgs e)
         {
-            AddCategories adCat = new AddCategories();
-            adCat.Show();
+            AddCategories ac = (AddCategories)Application.OpenForms["AddCategories"];
+            if (ac != null)
+            {
+                ac.TopMost = true;
+            }
+            else
+            {
+                AddCategories adCat = new AddCategories();
+                adCat.Show();
+            }
+            
         }
 
         private void Form1_Activated(object sender, EventArgs e)

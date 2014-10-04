@@ -32,5 +32,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Gallery.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
+    <Setting Name="User" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UserType" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

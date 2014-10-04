@@ -172,57 +172,57 @@
             // 
             // txtAcName
             // 
-            this.txtAcName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcName.Location = new System.Drawing.Point(130, 60);
             this.txtAcName.Name = "txtAcName";
             this.txtAcName.ReadOnly = true;
-            this.txtAcName.Size = new System.Drawing.Size(192, 23);
+            this.txtAcName.Size = new System.Drawing.Size(192, 16);
             this.txtAcName.TabIndex = 32;
             // 
             // txtAcNum
             // 
-            this.txtAcNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcNum.Location = new System.Drawing.Point(518, 59);
             this.txtAcNum.Name = "txtAcNum";
             this.txtAcNum.ReadOnly = true;
-            this.txtAcNum.Size = new System.Drawing.Size(237, 23);
+            this.txtAcNum.Size = new System.Drawing.Size(237, 16);
             this.txtAcNum.TabIndex = 33;
             // 
             // txtAcType
             // 
-            this.txtAcType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcType.Location = new System.Drawing.Point(130, 116);
             this.txtAcType.Name = "txtAcType";
             this.txtAcType.ReadOnly = true;
-            this.txtAcType.Size = new System.Drawing.Size(192, 23);
+            this.txtAcType.Size = new System.Drawing.Size(192, 16);
             this.txtAcType.TabIndex = 34;
             // 
             // txtAcIniBal
             // 
-            this.txtAcIniBal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcIniBal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcIniBal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcIniBal.Location = new System.Drawing.Point(518, 116);
             this.txtAcIniBal.Name = "txtAcIniBal";
             this.txtAcIniBal.ReadOnly = true;
-            this.txtAcIniBal.Size = new System.Drawing.Size(237, 23);
+            this.txtAcIniBal.Size = new System.Drawing.Size(237, 16);
             this.txtAcIniBal.TabIndex = 35;
             // 
             // txtAcAvailBal
             // 
-            this.txtAcAvailBal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcAvailBal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcAvailBal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcAvailBal.Location = new System.Drawing.Point(518, 175);
             this.txtAcAvailBal.Name = "txtAcAvailBal";
             this.txtAcAvailBal.ReadOnly = true;
-            this.txtAcAvailBal.Size = new System.Drawing.Size(237, 23);
+            this.txtAcAvailBal.Size = new System.Drawing.Size(237, 16);
             this.txtAcAvailBal.TabIndex = 36;
             // 
             // txtAcDisc
             // 
-            this.txtAcDisc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAcDisc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAcDisc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAcDisc.Location = new System.Drawing.Point(130, 179);
             this.txtAcDisc.Multiline = true;
@@ -235,7 +235,7 @@
             // 
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel9);
-            this.panel7.Location = new System.Drawing.Point(12, 367);
+            this.panel7.Location = new System.Drawing.Point(12, 369);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(776, 61);
             this.panel7.TabIndex = 69;
@@ -400,9 +400,9 @@
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(5, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Staff Member :";
+            this.label2.Text = "Account :";
             // 
             // viewAccounts
             // 
@@ -413,7 +413,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "viewAccounts";
-            this.Text = "viewAccounts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "View All Accounts";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.viewAccounts_FormClosing);
             this.Load += new System.EventHandler(this.viewAccounts_Load);
             this.panel7.ResumeLayout(false);

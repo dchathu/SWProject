@@ -78,6 +78,7 @@ namespace Software
             cmd.ExecuteNonQuery();
 
             con.Close();
+            
 
             DialogResult dg = MessageBox.Show("Account Successfully Added", "Success", MessageBoxButtons.OK);
             if (dg == DialogResult.OK)
