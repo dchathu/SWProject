@@ -340,6 +340,7 @@
             this.Name = "Schedule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedule";
+            this.Activated += new System.EventHandler(this.Schedule_Activated);
             this.Load += new System.EventHandler(this.Schedule_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

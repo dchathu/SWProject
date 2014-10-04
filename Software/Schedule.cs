@@ -120,6 +120,7 @@ namespace Software
                 {
                     UpdateRecord s = new UpdateRecord(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
                     s.Show();
+                    
                 }
                
             }
@@ -183,6 +184,11 @@ namespace Software
         private void button2_Click_1(object sender, EventArgs e)
         {
             LoadSchedule(dtpSt.Value.AddYears(-10), dtpEn.Value.AddYears(+10));
+        }
+
+        private void Schedule_Activated(object sender, EventArgs e)
+        {
+            this.TopMost = false;
         }
 
     }

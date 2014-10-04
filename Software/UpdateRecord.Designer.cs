@@ -281,6 +281,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Name = "UpdateRecord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Schedule";
             this.Activated += new System.EventHandler(this.UpdateRecord_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UpdateRecord_FormClosing);
