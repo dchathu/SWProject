@@ -221,8 +221,7 @@ namespace Software
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Login l = new Login();
-            l.Show();
+           
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -258,6 +257,17 @@ namespace Software
                 ManageUsers mun = new ManageUsers();
                 mun.Show();
             }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
         }       
     }
 }
