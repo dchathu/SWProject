@@ -105,8 +105,17 @@ namespace Software
 
         private void btnAddAccount_Click(object sender, EventArgs e)
         {
-            AddAcount adac = new AddAcount();
-            adac.Show();
+            AddAcount ac = (AddAcount)Application.OpenForms["AddAcount"];
+            if (ac != null)
+            {
+                ac.TopMost = true;
+            }
+            else
+            {
+                AddAcount adac = new AddAcount();
+                adac.Show();
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -307,6 +316,15 @@ namespace Software
         private void Form1_Activated(object sender, EventArgs e)
         {
             this.TopMost = false;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CoverPage cs = (CoverPage)Application.OpenForms["CoverPage"];
+            if (cs != null)
+            {
+                cs.TopMost = true;
+            }
         }
 
     }

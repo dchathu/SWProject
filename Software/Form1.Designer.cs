@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -83,18 +82,8 @@
             this.pnBtnDock = new System.Windows.Forms.Panel();
             this.btnSelectAcount = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -120,7 +109,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.pnDtMang.SuspendLayout();
             this.pnBtnDock.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -175,7 +163,7 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.Silver;
+            this.panel10.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel10.Controls.Add(this.label6);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
@@ -186,9 +174,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label6.Location = new System.Drawing.Point(12, -1);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 15);
@@ -223,7 +211,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.Silver;
+            this.panel9.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel9.Controls.Add(this.label4);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
@@ -235,7 +223,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(12, -1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 15);
@@ -254,7 +242,7 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.Silver;
+            this.panel11.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
@@ -266,7 +254,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(7, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 15);
@@ -279,33 +267,34 @@
             this.chart1.BorderlineColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.BackColor = System.Drawing.SystemColors.Control;
             this.chart1.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(0, 11);
             this.chart1.Name = "chart1";
-            series1.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Color = System.Drawing.SystemColors.Control;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            series1.IsValueShownAsLabel = true;
-            series1.LabelBackColor = System.Drawing.Color.Transparent;
-            series1.LabelBorderColor = System.Drawing.Color.Transparent;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.LabelFormat = "0.00";
-            series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.SystemColors.Control;
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series7.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series7.Color = System.Drawing.SystemColors.Control;
+            series7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            series7.IsValueShownAsLabel = true;
+            series7.LabelBackColor = System.Drawing.Color.Transparent;
+            series7.LabelBorderColor = System.Drawing.Color.Transparent;
+            series7.LabelForeColor = System.Drawing.Color.White;
+            series7.LabelFormat = "0.00";
+            series7.Legend = "Legend1";
+            series7.MarkerColor = System.Drawing.SystemColors.Control;
+            series7.Name = "Series1";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(367, 495);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.MintCream;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.flowLayoutPanel6);
@@ -363,6 +352,7 @@
             // 
             // flowLayoutPanel6
             // 
+            this.flowLayoutPanel6.BackColor = System.Drawing.Color.MintCream;
             this.flowLayoutPanel6.Controls.Add(this.label2);
             this.flowLayoutPanel6.Controls.Add(this.lbIncome);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -397,7 +387,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -409,7 +399,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(8, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 17);
@@ -440,12 +430,12 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel3.MaximumSize = new System.Drawing.Size(200, 222);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(185, 148);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(185, 135);
             this.flowLayoutPanel3.TabIndex = 7;
             // 
             // btnAccount
             // 
-            this.btnAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAccount.BackColor = System.Drawing.Color.Teal;
             this.btnAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAccount.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAccount.FlatAppearance.BorderSize = 0;
@@ -454,7 +444,7 @@
             this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.Location = new System.Drawing.Point(3, 3);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(177, 45);
+            this.btnAccount.Size = new System.Drawing.Size(177, 56);
             this.btnAccount.TabIndex = 1;
             this.btnAccount.Text = "Accounts";
             this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -466,9 +456,9 @@
             this.pnDtAccount.AutoScroll = true;
             this.pnDtAccount.Controls.Add(this.button2);
             this.pnDtAccount.Controls.Add(this.btnAddAccount);
-            this.pnDtAccount.Location = new System.Drawing.Point(3, 54);
+            this.pnDtAccount.Location = new System.Drawing.Point(3, 65);
             this.pnDtAccount.Name = "pnDtAccount";
-            this.pnDtAccount.Size = new System.Drawing.Size(177, 89);
+            this.pnDtAccount.Size = new System.Drawing.Size(177, 65);
             this.pnDtAccount.TabIndex = 2;
             // 
             // button2
@@ -516,15 +506,15 @@
             this.flowLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel4.Controls.Add(this.btnTrans);
             this.flowLayoutPanel4.Controls.Add(this.pnDtTrans);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 157);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 144);
             this.flowLayoutPanel4.MaximumSize = new System.Drawing.Size(200, 222);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(185, 120);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(185, 131);
             this.flowLayoutPanel4.TabIndex = 7;
             // 
             // btnTrans
             // 
-            this.btnTrans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTrans.BackColor = System.Drawing.Color.Teal;
             this.btnTrans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTrans.FlatAppearance.BorderSize = 0;
             this.btnTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -532,7 +522,7 @@
             this.btnTrans.ForeColor = System.Drawing.Color.White;
             this.btnTrans.Location = new System.Drawing.Point(3, 3);
             this.btnTrans.Name = "btnTrans";
-            this.btnTrans.Size = new System.Drawing.Size(177, 45);
+            this.btnTrans.Size = new System.Drawing.Size(177, 56);
             this.btnTrans.TabIndex = 1;
             this.btnTrans.Text = "Transactions";
             this.btnTrans.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -544,7 +534,7 @@
             this.pnDtTrans.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnDtTrans.Controls.Add(this.button7);
             this.pnDtTrans.Controls.Add(this.button6);
-            this.pnDtTrans.Location = new System.Drawing.Point(3, 54);
+            this.pnDtTrans.Location = new System.Drawing.Point(3, 65);
             this.pnDtTrans.Name = "pnDtTrans";
             this.pnDtTrans.Size = new System.Drawing.Size(177, 61);
             this.pnDtTrans.TabIndex = 2;
@@ -598,15 +588,15 @@
             this.flowLayoutPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel5.Controls.Add(this.btnStat);
             this.flowLayoutPanel5.Controls.Add(this.pnDtStat);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 283);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 281);
             this.flowLayoutPanel5.MaximumSize = new System.Drawing.Size(200, 222);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(185, 147);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(185, 165);
             this.flowLayoutPanel5.TabIndex = 7;
             // 
             // btnStat
             // 
-            this.btnStat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStat.BackColor = System.Drawing.Color.Teal;
             this.btnStat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnStat.FlatAppearance.BorderSize = 0;
             this.btnStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -614,7 +604,7 @@
             this.btnStat.ForeColor = System.Drawing.Color.White;
             this.btnStat.Location = new System.Drawing.Point(3, 3);
             this.btnStat.Name = "btnStat";
-            this.btnStat.Size = new System.Drawing.Size(177, 38);
+            this.btnStat.Size = new System.Drawing.Size(177, 56);
             this.btnStat.TabIndex = 1;
             this.btnStat.Text = "Stats";
             this.btnStat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -627,7 +617,7 @@
             this.pnDtStat.Controls.Add(this.button11);
             this.pnDtStat.Controls.Add(this.button10);
             this.pnDtStat.Controls.Add(this.button9);
-            this.pnDtStat.Location = new System.Drawing.Point(3, 47);
+            this.pnDtStat.Location = new System.Drawing.Point(3, 65);
             this.pnDtStat.Name = "pnDtStat";
             this.pnDtStat.Size = new System.Drawing.Size(177, 95);
             this.pnDtStat.TabIndex = 2;
@@ -702,15 +692,15 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.btnMang);
             this.flowLayoutPanel1.Controls.Add(this.pnDtMang);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 436);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 452);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(200, 222);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(185, 151);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(185, 135);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // btnMang
             // 
-            this.btnMang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMang.BackColor = System.Drawing.Color.Teal;
             this.btnMang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnMang.FlatAppearance.BorderSize = 0;
             this.btnMang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -718,7 +708,7 @@
             this.btnMang.ForeColor = System.Drawing.Color.White;
             this.btnMang.Location = new System.Drawing.Point(3, 3);
             this.btnMang.Name = "btnMang";
-            this.btnMang.Size = new System.Drawing.Size(177, 45);
+            this.btnMang.Size = new System.Drawing.Size(177, 56);
             this.btnMang.TabIndex = 1;
             this.btnMang.Text = "Manage";
             this.btnMang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -730,9 +720,9 @@
             this.pnDtMang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnDtMang.Controls.Add(this.button13);
             this.pnDtMang.Controls.Add(this.button12);
-            this.pnDtMang.Location = new System.Drawing.Point(3, 54);
+            this.pnDtMang.Location = new System.Drawing.Point(3, 65);
             this.pnDtMang.Name = "pnDtMang";
-            this.pnDtMang.Size = new System.Drawing.Size(177, 92);
+            this.pnDtMang.Size = new System.Drawing.Size(177, 65);
             this.pnDtMang.TabIndex = 2;
             // 
             // button13
@@ -779,20 +769,21 @@
             // 
             // pnBtnDock
             // 
-            this.pnBtnDock.BackColor = System.Drawing.SystemColors.Control;
+            this.pnBtnDock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pnBtnDock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnBtnDock.Controls.Add(this.label8);
             this.pnBtnDock.Controls.Add(this.btnSelectAcount);
             this.pnBtnDock.Controls.Add(this.label5);
             this.pnBtnDock.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnBtnDock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnBtnDock.Location = new System.Drawing.Point(0, 25);
+            this.pnBtnDock.Location = new System.Drawing.Point(0, 0);
             this.pnBtnDock.Name = "pnBtnDock";
-            this.pnBtnDock.Size = new System.Drawing.Size(998, 43);
+            this.pnBtnDock.Size = new System.Drawing.Size(998, 69);
             this.pnBtnDock.TabIndex = 5;
             // 
             // btnSelectAcount
             // 
-            this.btnSelectAcount.Location = new System.Drawing.Point(73, 11);
+            this.btnSelectAcount.Location = new System.Drawing.Point(789, 29);
             this.btnSelectAcount.Name = "btnSelectAcount";
             this.btnSelectAcount.Size = new System.Drawing.Size(196, 23);
             this.btnSelectAcount.TabIndex = 5;
@@ -804,112 +795,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 12);
+            this.label5.Location = new System.Drawing.Point(722, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Account :";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton,
-            this.openToolStripButton,
-            this.saveToolStripButton,
-            this.printToolStripButton,
-            this.toolStripSeparator,
-            this.cutToolStripButton,
-            this.copyToolStripButton,
-            this.pasteToolStripButton,
-            this.toolStripSeparator1,
-            this.helpToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(998, 25);
-            this.toolStrip1.TabIndex = 9;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // newToolStripButton
-            // 
-            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
-            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton.Text = "&New";
-            // 
-            // openToolStripButton
-            // 
-            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.openToolStripButton.Text = "&Open";
-            // 
-            // saveToolStripButton
-            // 
-            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton.Text = "&Save";
-            // 
-            // printToolStripButton
-            // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "&Print";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // cutToolStripButton
-            // 
-            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
-            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.cutToolStripButton.Text = "C&ut";
-            // 
-            // copyToolStripButton
-            // 
-            this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
-            this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.copyToolStripButton.Text = "&Copy";
-            // 
-            // pasteToolStripButton
-            // 
-            this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
-            this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.pasteToolStripButton.Text = "&Paste";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // helpToolStripButton
-            // 
-            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
-            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton.Text = "He&lp";
             // 
             // contextMenuStrip1
             // 
@@ -917,20 +807,33 @@
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked_1);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(11, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(683, 49);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "FAS Students\' Union Account Manager";
+            this.label8.UseWaitCursor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 667);
             this.Controls.Add(this.pnBtnDock);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "FAS Students\' Union Account Manager";
             this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -966,10 +869,7 @@
             this.pnDtMang.ResumeLayout(false);
             this.pnBtnDock.ResumeLayout(false);
             this.pnBtnDock.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1000,17 +900,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton newToolStripButton;
-        private System.Windows.Forms.ToolStripButton openToolStripButton;
-        private System.Windows.Forms.ToolStripButton saveToolStripButton;
-        private System.Windows.Forms.ToolStripButton printToolStripButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
-        private System.Windows.Forms.ToolStripButton cutToolStripButton;
-        private System.Windows.Forms.ToolStripButton copyToolStripButton;
-        private System.Windows.Forms.ToolStripButton pasteToolStripButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button11;
@@ -1037,6 +926,7 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DateTimePicker dtpEn;
         public System.Windows.Forms.DateTimePicker dtpSt;
+        private System.Windows.Forms.Label label8;
     }
 }
 

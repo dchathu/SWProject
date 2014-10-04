@@ -24,12 +24,12 @@ namespace Software
 
         protected void btnCancelAdd_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void btnResetFields_Click(object sender, EventArgs e)
         {
-            clearFields();
+            
         }
 
         public void clearFields()
@@ -43,26 +43,7 @@ namespace Software
 
         private void btnAddAc_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(conStr);
-            con.Open();
             
-            string sql="INSERT INTO Accounts (AccountName,AccountNumber,AccountType,InitialBalance,AccountDiscription,AvailableBal,TotalIncome,TotalExpense) VALUES (@ActName,@ActNum,@ActType,@IniBal,@ActDisc,@IniBal,0,0)";
-            SqlCommand cmd = new SqlCommand(sql, con);
-
-            cmd.Parameters.AddWithValue("@ActName",txtAdAcName.Text);
-            cmd.Parameters.AddWithValue("@ActNum", Convert.ToInt64(txtAdAcNum.Text));
-            cmd.Parameters.AddWithValue("@ActType", cmbAdAcType.Text);
-            cmd.Parameters.AddWithValue("@IniBal", Convert.ToInt64(txtAdAcIniBal.Text));
-            cmd.Parameters.AddWithValue("@ActDisc", txtAdAcDisc.Text);
-            cmd.ExecuteNonQuery();
-            
-            con.Close();
-
-            DialogResult dg = MessageBox.Show("Account Successfully Added", "Success", MessageBoxButtons.OK);
-            if (dg == DialogResult.OK)
-            {
-                this.Close();
-            }
         }
 
         private void AddAcount_FormClosing(object sender, FormClosingEventArgs e)
@@ -74,6 +55,40 @@ namespace Software
                 mf.LoadTransactions(mf.dtpSt.Value, mf.dtpEn.Value);
                 mf.TopMost = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conStr);
+            con.Open();
+
+            string sql = "INSERT INTO Accounts (AccountName,AccountNumber,AccountType,InitialBalance,AccountDiscription,AvailableBal,TotalIncome,TotalExpense) VALUES (@ActName,@ActNum,@ActType,@IniBal,@ActDisc,@IniBal,0,0)";
+            SqlCommand cmd = new SqlCommand(sql, con);
+
+            cmd.Parameters.AddWithValue("@ActName", txtAdAcName.Text);
+            cmd.Parameters.AddWithValue("@ActNum", Convert.ToInt64(txtAdAcNum.Text));
+            cmd.Parameters.AddWithValue("@ActType", cmbAdAcType.Text);
+            cmd.Parameters.AddWithValue("@IniBal", Convert.ToInt64(txtAdAcIniBal.Text));
+            cmd.Parameters.AddWithValue("@ActDisc", txtAdAcDisc.Text);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+
+            DialogResult dg = MessageBox.Show("Account Successfully Added", "Success", MessageBoxButtons.OK);
+            if (dg == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clearFields();
         }
     }
 }

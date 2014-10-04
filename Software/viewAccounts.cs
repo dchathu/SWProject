@@ -60,31 +60,18 @@ namespace Software
 
         private void btnVwNxtAc_Click(object sender, EventArgs e)
         {
-            if (pos != maxRows-1)
-            {
-                pos++;
-                navAcData();
-            }
-
-            else
-                MessageBox.Show("No More Accounts");
+            
         }
 
         private void btnVwPrvAc_Click(object sender, EventArgs e)
         {
-            if (pos != 0)
-            {
-                pos--;
-                navAcData();
-            }
-            else
-                MessageBox.Show("No More Accounts");
+           
 
         }
 
         private void btnVwExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             
         }
 
@@ -97,6 +84,44 @@ namespace Software
                 mf.LoadTransactions(mf.dtpSt.Value, mf.dtpEn.Value);
                 mf.TopMost = true;
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (pos != maxRows - 1)
+            {
+                pos++;
+                navAcData();
+            }
+
+            else
+                MessageBox.Show("No More Accounts");
+        }
+
+        private void btnAddStaff_Click(object sender, EventArgs e)
+        {
+            if (pos != 0)
+            {
+                pos--;
+                navAcData();
+            }
+            else
+                MessageBox.Show("No More Accounts");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pos = dt.Rows.Count - 1;
+        }
+
+        private void btnAllDetails_Click(object sender, EventArgs e)
+        {
+            pos = 0;
         }
 
     }

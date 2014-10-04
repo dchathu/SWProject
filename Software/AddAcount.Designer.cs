@@ -28,85 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label accountNumberLabel;
-            System.Windows.Forms.Label accountTypeLabel;
-            System.Windows.Forms.Label initialBalanceLabel;
-            System.Windows.Forms.Label accountDiscriptionLabel;
-            this.label1 = new System.Windows.Forms.Label();
             this.txtAdAcName = new System.Windows.Forms.TextBox();
             this.cmbAdAcType = new System.Windows.Forms.ComboBox();
-            this.btnAddAc = new System.Windows.Forms.Button();
             this.txtAdAcNum = new System.Windows.Forms.TextBox();
             this.txtAdAcIniBal = new System.Windows.Forms.TextBox();
             this.txtAdAcDisc = new System.Windows.Forms.TextBox();
-            this.btnResetFields = new System.Windows.Forms.Button();
-            this.btnCancelAdd = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            accountNumberLabel = new System.Windows.Forms.Label();
-            accountTypeLabel = new System.Windows.Forms.Label();
-            initialBalanceLabel = new System.Windows.Forms.Label();
-            accountDiscriptionLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // accountNumberLabel
-            // 
-            accountNumberLabel.AutoSize = true;
-            accountNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            accountNumberLabel.Location = new System.Drawing.Point(12, 78);
-            accountNumberLabel.Name = "accountNumberLabel";
-            accountNumberLabel.Size = new System.Drawing.Size(113, 17);
-            accountNumberLabel.TabIndex = 9;
-            accountNumberLabel.Text = "Account Number";
-            // 
-            // accountTypeLabel
-            // 
-            accountTypeLabel.AutoSize = true;
-            accountTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            accountTypeLabel.Location = new System.Drawing.Point(12, 123);
-            accountTypeLabel.Name = "accountTypeLabel";
-            accountTypeLabel.Size = new System.Drawing.Size(95, 17);
-            accountTypeLabel.TabIndex = 10;
-            accountTypeLabel.Text = "Account Type";
-            // 
-            // initialBalanceLabel
-            // 
-            initialBalanceLabel.AutoSize = true;
-            initialBalanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            initialBalanceLabel.Location = new System.Drawing.Point(12, 170);
-            initialBalanceLabel.Name = "initialBalanceLabel";
-            initialBalanceLabel.Size = new System.Drawing.Size(95, 17);
-            initialBalanceLabel.TabIndex = 11;
-            initialBalanceLabel.Text = "Initial Balance";
-            // 
-            // accountDiscriptionLabel
-            // 
-            accountDiscriptionLabel.AutoSize = true;
-            accountDiscriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            accountDiscriptionLabel.Location = new System.Drawing.Point(12, 209);
-            accountDiscriptionLabel.Name = "accountDiscriptionLabel";
-            accountDiscriptionLabel.Size = new System.Drawing.Size(74, 17);
-            accountDiscriptionLabel.TabIndex = 12;
-            accountDiscriptionLabel.Text = "Discription";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account Name";
             // 
             // txtAdAcName
             // 
-            this.txtAdAcName.Location = new System.Drawing.Point(164, 27);
+            this.txtAdAcName.Location = new System.Drawing.Point(17, 91);
             this.txtAdAcName.Name = "txtAdAcName";
-            this.txtAdAcName.Size = new System.Drawing.Size(176, 20);
+            this.txtAdAcName.Size = new System.Drawing.Size(221, 20);
             this.txtAdAcName.TabIndex = 1;
             // 
             // cmbAdAcType
@@ -116,164 +72,253 @@
             "Savings",
             "Checking",
             "Current"});
-            this.cmbAdAcType.Location = new System.Drawing.Point(164, 123);
+            this.cmbAdAcType.Location = new System.Drawing.Point(17, 169);
             this.cmbAdAcType.Name = "cmbAdAcType";
             this.cmbAdAcType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbAdAcType.Size = new System.Drawing.Size(176, 21);
+            this.cmbAdAcType.Size = new System.Drawing.Size(221, 21);
             this.cmbAdAcType.TabIndex = 2;
             this.cmbAdAcType.Text = "Select Account Type";
             // 
-            // btnAddAc
-            // 
-            this.btnAddAc.Location = new System.Drawing.Point(103, 323);
-            this.btnAddAc.Name = "btnAddAc";
-            this.btnAddAc.Size = new System.Drawing.Size(75, 30);
-            this.btnAddAc.TabIndex = 3;
-            this.btnAddAc.Text = "Add";
-            this.btnAddAc.UseVisualStyleBackColor = true;
-            this.btnAddAc.Click += new System.EventHandler(this.btnAddAc_Click);
-            // 
             // txtAdAcNum
             // 
-            this.txtAdAcNum.Location = new System.Drawing.Point(164, 75);
+            this.txtAdAcNum.Location = new System.Drawing.Point(279, 91);
             this.txtAdAcNum.Name = "txtAdAcNum";
-            this.txtAdAcNum.Size = new System.Drawing.Size(176, 20);
+            this.txtAdAcNum.Size = new System.Drawing.Size(237, 20);
             this.txtAdAcNum.TabIndex = 13;
             // 
             // txtAdAcIniBal
             // 
-            this.txtAdAcIniBal.Location = new System.Drawing.Point(164, 167);
+            this.txtAdAcIniBal.Location = new System.Drawing.Point(279, 170);
             this.txtAdAcIniBal.Name = "txtAdAcIniBal";
-            this.txtAdAcIniBal.Size = new System.Drawing.Size(176, 20);
+            this.txtAdAcIniBal.Size = new System.Drawing.Size(237, 20);
             this.txtAdAcIniBal.TabIndex = 14;
             // 
             // txtAdAcDisc
             // 
-            this.txtAdAcDisc.Location = new System.Drawing.Point(164, 209);
+            this.txtAdAcDisc.Location = new System.Drawing.Point(17, 252);
             this.txtAdAcDisc.MaxLength = 145;
             this.txtAdAcDisc.Multiline = true;
             this.txtAdAcDisc.Name = "txtAdAcDisc";
-            this.txtAdAcDisc.Size = new System.Drawing.Size(176, 101);
+            this.txtAdAcDisc.Size = new System.Drawing.Size(221, 101);
             this.txtAdAcDisc.TabIndex = 15;
             // 
-            // btnResetFields
+            // panel1
             // 
-            this.btnResetFields.Location = new System.Drawing.Point(184, 323);
-            this.btnResetFields.Name = "btnResetFields";
-            this.btnResetFields.Size = new System.Drawing.Size(75, 30);
-            this.btnResetFields.TabIndex = 16;
-            this.btnResetFields.Text = "Reset";
-            this.btnResetFields.UseVisualStyleBackColor = true;
-            this.btnResetFields.Click += new System.EventHandler(this.btnResetFields_Click);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.txtAdAcName);
+            this.panel1.Controls.Add(this.txtAdAcDisc);
+            this.panel1.Controls.Add(this.txtAdAcNum);
+            this.panel1.Controls.Add(this.txtAdAcIniBal);
+            this.panel1.Controls.Add(this.cmbAdAcType);
+            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(542, 369);
+            this.panel1.TabIndex = 38;
             // 
-            // btnCancelAdd
+            // panel2
             // 
-            this.btnCancelAdd.Location = new System.Drawing.Point(265, 323);
-            this.btnCancelAdd.Name = "btnCancelAdd";
-            this.btnCancelAdd.Size = new System.Drawing.Size(75, 30);
-            this.btnCancelAdd.TabIndex = 17;
-            this.btnCancelAdd.Text = "Close";
-            this.btnCancelAdd.UseVisualStyleBackColor = true;
-            this.btnCancelAdd.Click += new System.EventHandler(this.btnCancelAdd_Click);
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(540, 18);
+            this.panel2.TabIndex = 0;
             // 
-            // label8
+            // label3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(131, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 17);
-            this.label8.TabIndex = 37;
-            this.label8.Text = ":";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(5, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Add New Account";
             // 
-            // label7
+            // label4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(131, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 17);
-            this.label7.TabIndex = 36;
-            this.label7.Text = ":";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Account Name :";
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(131, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 17);
-            this.label6.TabIndex = 35;
-            this.label6.Text = ":";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(276, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Initial Balance :";
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 17);
-            this.label5.TabIndex = 34;
-            this.label5.Text = ":";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(276, 53);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Account Number :";
             // 
-            // label9
+            // label12
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(131, 209);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 17);
-            this.label9.TabIndex = 32;
-            this.label9.Text = ":";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(14, 139);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Account Type";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(14, 220);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Discription :";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Location = new System.Drawing.Point(13, 397);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(541, 82);
+            this.panel7.TabIndex = 44;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.flowLayoutPanel2);
+            this.panel8.Location = new System.Drawing.Point(352, 11);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(174, 66);
+            this.panel8.TabIndex = 1;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel2.Controls.Add(this.button2);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(17, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(157, 66);
+            this.flowLayoutPanel2.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(7, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 56);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.flowLayoutPanel1);
+            this.panel9.Location = new System.Drawing.Point(3, 11);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(316, 66);
+            this.panel9.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnAddStaff);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(313, 66);
+            this.flowLayoutPanel1.TabIndex = 42;
+            // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.BackColor = System.Drawing.Color.Teal;
+            this.btnAddStaff.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.ForeColor = System.Drawing.Color.White;
+            this.btnAddStaff.Location = new System.Drawing.Point(3, 3);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(138, 56);
+            this.btnAddStaff.TabIndex = 7;
+            this.btnAddStaff.Text = "Add Acount";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Teal;
+            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(147, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 56);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Reset Fields";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddAcount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 365);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnCancelAdd);
-            this.Controls.Add(this.btnResetFields);
-            this.Controls.Add(this.txtAdAcDisc);
-            this.Controls.Add(this.txtAdAcIniBal);
-            this.Controls.Add(this.txtAdAcNum);
-            this.Controls.Add(accountNumberLabel);
-            this.Controls.Add(accountTypeLabel);
-            this.Controls.Add(initialBalanceLabel);
-            this.Controls.Add(accountDiscriptionLabel);
-            this.Controls.Add(this.btnAddAc);
-            this.Controls.Add(this.cmbAdAcType);
-            this.Controls.Add(this.txtAdAcName);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(572, 481);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddAcount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddAcount";
+            this.Text = "Add Acount";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddAcount_FormClosing);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtAdAcName;
         private System.Windows.Forms.ComboBox cmbAdAcType;
-        private System.Windows.Forms.Button btnAddAc;
         private System.Windows.Forms.TextBox txtAdAcNum;
         private System.Windows.Forms.TextBox txtAdAcIniBal;
         private System.Windows.Forms.TextBox txtAdAcDisc;
-        private System.Windows.Forms.Button btnResetFields;
-        private System.Windows.Forms.Button btnCancelAdd;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.Button button1;
     }
 }
