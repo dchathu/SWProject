@@ -28,6 +28,8 @@ namespace Software
 
         private void viewAccounts_Load(object sender, EventArgs e)
         {
+            
+            
             try
             {
                 SqlConnection con = new SqlConnection(conStr);
@@ -35,13 +37,18 @@ namespace Software
                 dt = new DataTable();
                 da.Fill(dt);
                 maxRows = dt.Rows.Count;
-
+                if(maxRows<1)
+                {
+                    MessageBox.Show("No Accounts Created!");
+                    this.Close();
+                }
+                    
                 navAcData();
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
             }
         }
 
@@ -49,6 +56,7 @@ namespace Software
         {
             drow = dt.Rows[pos];
 
+            lblNumber.Text = (pos + 1).ToString() + " Of " + dt.Rows.Count.ToString();
             txtAcName.Text = drow.ItemArray.GetValue(0).ToString();
             txtAcNum.Text = drow.ItemArray.GetValue(1).ToString();
             txtAcType.Text = drow.ItemArray.GetValue(2).ToString();
