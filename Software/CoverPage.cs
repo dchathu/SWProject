@@ -113,7 +113,7 @@ namespace Software
 
             DataTable dt = new DataTable();
             dt.Clear();
-            da.Fill(dt);
+         //   da.Fill(dt);
             con.Close();
             DataTable dtUE = new DataTable();
             DataTable dtUID = new DataTable();
