@@ -75,7 +75,7 @@ namespace Software
         #region Load Events
         private void LoadEvents(DateTime dtSt, DateTime dtEn)
         {
-            con.Open();
+            //con.Open();
 
             da = new SqlDataAdapter();
             da.SelectCommand = new SqlCommand("SELECT Date,Schedule,Remarks,Time,Venue FROM Schedule WHERE Date >= @stDt AND Date <=@enDt", con);

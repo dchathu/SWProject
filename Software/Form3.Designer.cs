@@ -1040,7 +1040,7 @@
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(228, 23);
             this.txtContactNo.TabIndex = 38;
-            this.txtContactNo.Validated += new System.EventHandler(this.txtContactNo_Validated);
+            this.txtContactNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtContactNo_Validating);
             // 
             // txtNIC
             // 
@@ -1049,6 +1049,7 @@
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(228, 23);
             this.txtNIC.TabIndex = 36;
+            this.txtNIC.Validating += new System.ComponentModel.CancelEventHandler(this.txtNIC_Validating);
             // 
             // lblAddress
             // 
@@ -1260,7 +1261,8 @@
             this.txtRegNo.TabIndex = 50;
             this.txtRegNo.TextChanged += new System.EventHandler(this.txtRegNo_TextChanged);
             this.txtRegNo.Leave += new System.EventHandler(this.txtRegNo_Leave);
-            this.txtRegNo.Validated += new System.EventHandler(this.txtRegNo_Validated);
+            this.txtRegNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtRegNo_Validating);
+          //  this.txtRegNo.Validated += new System.EventHandler(this.txtRegNo_Validated);
             // 
             // lblRegNo
             // 

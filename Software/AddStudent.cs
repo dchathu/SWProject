@@ -188,33 +188,33 @@ namespace Software
             
         }
 
-     
-        private void txtRegNo_Validated(object sender, EventArgs e)
-        {
-            if (txtRegNo.TextLength < 11)
-                errorProvider1.SetError(txtRegNo, "enter corect format");
-            else if (txtRegNo.Text != "")
+
+        private Boolean Check_Index(string s)
+        {string gh="";
+            bool a = false;
+            if (s.Length == 11)
+                gh = s.Substring(9, 2);
+            else
+                gh = s.Substring(9, 3);
+            foreach (char c in gh)
             {
-                string x = txtRegNo.Text;
-                if (!Check_year(x))
+                if (char.IsLetter(c))
                 {
-                    errorProvider1.SetError(txtRegNo, "enter year code corectly");
-                }
-                if (!Check_course(x))
-                {
-                    errorProvider1.SetError(txtRegNo, "enter course code corectly");
+                    a = true;
                 }
                 else
-                    errorProvider1.Clear();
+                {
+                    a = false;
+                }
+                
             }
-            else
-            errorProvider1.Clear();
+            return a;
         }
-
+       
         private Boolean Check_course(string s)
         {
             bool a = false;
-            if (s.Substring(5, 3) == "ICT" || s.Substring(5, 3) == "ASE" || s.Substring(5, 3) == "ASP")
+            if (s.Substring(5, 3) == "ICT" || s.Substring(5, 3) == "ASB" || s.Substring(5, 3) == "ASP")
             {
                 a = true;
             }
@@ -310,10 +310,17 @@ namespace Software
             {
                 if (!rEMail.IsMatch(textBox57.Text))
                 {
-                    MessageBox.Show("invalid email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errorProvider1.SetError(textBox57,"invalid email address");
                     textBox57.SelectAll();
                     e.Cancel = true;
                 }
+                else
+            
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.Clear();
             }
         }
 
@@ -354,35 +361,7 @@ namespace Software
             button2.Enabled = false;
         }
 
-        private void txtContactNo_Validated(object sender, EventArgs e)
-        {
-            string wrd = txtContactNo.Text.ToString();
-            Boolean flag = true;
-            foreach (char c in wrd)
-            {
-                if (char.IsLetter(c))
-                {
-                    flag = false;
-                    break;
-                }
-
-            }
-
-            if (txtContactNo.TextLength < 10)
-            {
-                errorProvider2.SetError(txtContactNo, "enter correct Number ");
-
-            }
-            if (flag == false)
-            {
-                errorProvider2.SetError(txtContactNo, "enter digits");
-            }
-
-            else
-            {
-                errorProvider2.Clear();
-            }
-        }
+      
 
         private void tabPage6_Click(object sender, EventArgs e)
         {
@@ -397,6 +376,114 @@ namespace Software
         private void tabPage5_Click(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void txtContactNo_Validating(object sender, CancelEventArgs e)
+        {
+            string wrd = txtContactNo.Text.ToString();
+            Boolean flag = true;
+            foreach (char c in wrd)
+            {
+                if (char.IsLetter(c))
+                {
+                    flag = false;
+                    break;
+                }
+
+            }
+
+            if (txtContactNo.TextLength != 10)
+            {
+                errorProvider2.SetError(txtContactNo, "enter correct Number ");
+                txtContactNo.SelectAll(); e.Cancel = true;
+
+
+            }
+            else if (flag == false)
+            {
+                errorProvider2.SetError(txtContactNo, "enter digits");
+                txtContactNo.SelectAll(); e.Cancel = true;
+            }
+
+            else
+            {
+                errorProvider2.Clear();
+            }
+        }
+
+        private void txtNIC_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtNIC.TextLength != 10)
+            {
+                errorProvider1.SetError(txtNIC, "Enter only 10 charatcers");
+                txtNIC.SelectAll(); e.Cancel = true;
+            }
+            else if (txtNIC.Text != "")
+            {
+                Boolean flag = false;
+                string s = txtNIC.Text.ToString().Substring(0, 9);
+                string t = txtNIC.Text.ToString().Substring(9, 1);
+                foreach (char c in s)
+                {
+                    if (char.IsLetter(c))
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+
+                if (flag)
+                {
+                    errorProvider1.SetError(txtNIC, "enter numbers only");
+                    txtNIC.SelectAll(); e.Cancel = true;
+                }
+                else
+                    errorProvider1.Clear();
+                if (t != "X" || t != "V")
+                {
+                    errorProvider1.SetError(txtRegNo, "Last character should be X or V");
+                    txtNIC.SelectAll(); e.Cancel = true;
+                }
+                else
+                    errorProvider1.Clear();
+            }
+
+            else
+                errorProvider1.Clear();
+        }
+
+        private void txtRegNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtRegNo.TextLength < 11)
+            {
+                errorProvider1.SetError(txtRegNo, "enter corect format \ne.g2011/ICT/00");
+                txtRegNo.SelectAll(); e.Cancel = true;
+            }
+            else if (txtRegNo.Text != "")
+            {
+                string x = txtRegNo.Text;
+                if (!Check_year(x))
+                {
+                    errorProvider1.SetError(txtRegNo, "enter year code corectly");
+                    txtRegNo.SelectAll(); e.Cancel = true;
+                }
+                if (!Check_course(x))
+                {
+                    errorProvider1.SetError(txtRegNo, "enter course code corectly\n(ICT,ASP,ASB)");
+                    txtRegNo.SelectAll(); e.Cancel = true;
+                }
+                    if(Check_Index(x))
+                    {
+                        errorProvider1.SetError(txtRegNo, "enter index number correctly");
+                        txtRegNo.SelectAll(); e.Cancel = true;
+                    }
+                else
+                    errorProvider1.Clear();
+            }
+            else
+                errorProvider1.Clear();
         }
     }
 }
