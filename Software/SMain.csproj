@@ -386,8 +386,8 @@
     <EmbeddedResource Include="LoginTemp.resx">
       <DependentUpon>LoginTemp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageUsers.resx">
-      <DependentUpon>ManageUsers.cs</DependentUpon>
+    <EmbeddedResource Include="PhotoViewer.resx">
+      <DependentUpon>PhotoViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Record.resx">
       <DependentUpon>Record.cs</DependentUpon>
@@ -440,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewAccounts.resx">
       <DependentUpon>viewAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viewphoto.resx">
+      <DependentUpon>Viewphoto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AchievementDataSet.xsc">
       <DependentUpon>AchievementDataSet.xsd</DependentUpon>

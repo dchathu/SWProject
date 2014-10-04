@@ -35,7 +35,7 @@ namespace Software
             myAdapter.Fill(myTable);//fill da table using adapter
             // dataGridView1.DataSource = myTable;
             albumsDataGridView.DataSource = myTable;
-            int x = 165, y = 13, kk = 1;
+            int x = 165, y = 35, kk = 1;
             PictureBox[] pic = new PictureBox[albumsDataGridView.Rows.Count - 1];
 
 
@@ -67,7 +67,7 @@ namespace Software
                 this.Controls.Add(lbl[i]);
                 pic[i].BorderStyle = BorderStyle.Fixed3D;
                 pic[i].Location = new Point(x, y);
-                lbl[i].Location = new Point(x, y + 140);
+                lbl[i].Location = new Point(x+10, y + 140);
 
                 pic[i].Size = new Size(110, 130);
                 kk++;

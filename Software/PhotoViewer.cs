@@ -20,6 +20,8 @@ namespace Software
         public static PictureBox pi;
         public static ImageList il;
         public static  PictureBox[] pic;
+        static string conStr = Properties.Settings.Default.GalleryConStr;
+        static SqlConnection con = new SqlConnection(conStr);
         public PhotoViewer()
         {
             InitializeComponent();
@@ -29,12 +31,7 @@ namespace Software
 
         private void Photoviewr_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'galleryDataSet1.AddPhotos' table. You can move, or remove it, as needed.
-            //this.addPhotosTableAdapter.Fill(this.galleryDataSet1.AddPhotos);
-
-           // MessageBox.Show(albm);
-            SqlConnection cnn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\admin\Desktop\SWProject\Software\Gallery.mdf;Integrated Security=True");
-            SqlCommand myCommand = new SqlCommand("Select * from AddPhotos WHERE AlbumName='" + albm.ToString().Trim() + "'", cnn);
+            SqlCommand myCommand = new SqlCommand("Select * from AddPhotos WHERE AlbumName='" + albm.ToString().Trim() + "'", con);
             SqlDataAdapter myAdapter = new SqlDataAdapter(myCommand);
             DataTable myTable = new DataTable();//create a table 
             myAdapter.Fill(myTable);//fill da table using adapter          
@@ -53,12 +50,12 @@ namespace Software
                 string RowType = addPhotosDataGridView.Rows[i].Cells[0].Value.ToString();
                 // textBox1.Text = RowType;
                 MemoryStream stream = new MemoryStream();
-                cnn.Open();
-                SqlCommand command = new SqlCommand("select Image from Albums where AlbumName='" + RowType.Trim() + "'", cnn);
+                con.Open();
+                SqlCommand command = new SqlCommand("select Image from Albums where AlbumName='" + RowType.Trim() + "'", con);
                 byte[] image = (byte[])addPhotosDataGridView.Rows[i].Cells[1].Value;
                 
                 stream.Write(image, 0, image.Length);
-                cnn.Close();
+                con.Close();
                 Bitmap bitmap = new Bitmap(stream);
 
                 pic[i] = new PictureBox();
