@@ -191,5 +191,14 @@ namespace Software
             this.TopMost = false;
         }
 
+        private void Schedule_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CoverPage cs = (CoverPage)Application.OpenForms["CoverPage"];
+            if (cs != null)
+            {
+                cs.TopMost = true;
+            }
+        }
+
     }
 }
