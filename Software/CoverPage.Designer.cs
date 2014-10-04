@@ -71,6 +71,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -114,16 +115,16 @@
             this.dtpSt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSt.Location = new System.Drawing.Point(12, 7);
             this.dtpSt.Name = "dtpSt";
-            this.dtpSt.Size = new System.Drawing.Size(120, 20);
+            this.dtpSt.Size = new System.Drawing.Size(97, 20);
             this.dtpSt.TabIndex = 45;
             this.dtpSt.ValueChanged += new System.EventHandler(this.dtpSt_ValueChanged);
             // 
             // dtpEn
             // 
             this.dtpEn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEn.Location = new System.Drawing.Point(164, 7);
+            this.dtpEn.Location = new System.Drawing.Point(141, 7);
             this.dtpEn.Name = "dtpEn";
-            this.dtpEn.Size = new System.Drawing.Size(120, 20);
+            this.dtpEn.Size = new System.Drawing.Size(97, 20);
             this.dtpEn.TabIndex = 46;
             this.dtpEn.ValueChanged += new System.EventHandler(this.dtpEn_ValueChanged);
             // 
@@ -312,18 +313,19 @@
             // panel19
             // 
             this.panel19.Controls.Add(this.dtpSt);
+            this.panel19.Controls.Add(this.button9);
             this.panel19.Controls.Add(this.dtpEn);
             this.panel19.Controls.Add(this.label9);
-            this.panel19.Location = new System.Drawing.Point(459, 3);
+            this.panel19.Location = new System.Drawing.Point(445, 3);
             this.panel19.Name = "panel19";
             this.panel19.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.panel19.Size = new System.Drawing.Size(295, 32);
+            this.panel19.Size = new System.Drawing.Size(309, 32);
             this.panel19.TabIndex = 2;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(138, 11);
+            this.label9.Location = new System.Drawing.Point(115, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(20, 13);
             this.label9.TabIndex = 6;
@@ -335,7 +337,7 @@
             this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(456, 32);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(436, 32);
             this.flowLayoutPanel10.TabIndex = 0;
             // 
             // lblToday
@@ -620,6 +622,16 @@
             this.panel7.Size = new System.Drawing.Size(778, 567);
             this.panel7.TabIndex = 2;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(249, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(53, 23);
+            this.button9.TabIndex = 51;
+            this.button9.Text = "Filter";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // CoverPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -715,5 +727,6 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.Button button9;
     }
 }

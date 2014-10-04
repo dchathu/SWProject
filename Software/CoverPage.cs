@@ -83,6 +83,7 @@ namespace Software
             da.SelectCommand.Parameters.AddWithValue("@enDt", dtEn);
 
             DataTable dt = new DataTable();
+            dt.Clear();
             da.Fill(dt);
             con.Close();
             DataTable dtUE = new DataTable();
@@ -144,12 +145,12 @@ namespace Software
 
         private void dtpEn_ValueChanged(object sender, EventArgs e)
         {
-            LoadEvents(dtpEn.Value, dtpSt.Value);
+          
         }
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            LoadEvents(dtpSt.Value, dtpEn.Value);
+           
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -166,12 +167,17 @@ namespace Software
 
         private void dtpSt_ValueChanged(object sender, EventArgs e)
         {
-            LoadEvents(dtpEn.Value, dtpSt.Value);
+            
         }
 
         private void CoverPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LoadEvents(dtpSt.Value, dtpEn.Value);
         }       
     }
 }
