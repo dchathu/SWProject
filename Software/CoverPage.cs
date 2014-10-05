@@ -96,6 +96,7 @@ namespace Software
         
         private void CoverPage_Load(object sender, EventArgs e)
         {
+            lblUserName.Text = Properties.Settings.Default.User.ToString();
             dtpEn.Value = DateTime.Today.AddMonths(+1);
             dtpSt.Value = DateTime.Today.AddDays(-1);
             LoadEvents(dtpSt.Value, dtpEn.Value);
