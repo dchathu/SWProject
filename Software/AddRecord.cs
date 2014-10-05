@@ -66,7 +66,7 @@ namespace Software
 
         private void AddRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Record rc = (Record)Application.OpenForms["Record"];
+            Achivements rc = (Achivements)Application.OpenForms["Record"];
             if (rc != null)
             {
                 rc.TopMost = true;

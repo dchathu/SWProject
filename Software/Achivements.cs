@@ -11,14 +11,14 @@ using System.Data.SqlClient;
 namespace Software
 {
 
-    public partial class Record : Form
+    public partial class Achivements : Form
     {
         static string conStr = Properties.Settings.Default.MainConString;
         static SqlConnection con = new SqlConnection(conStr);
         SqlDataAdapter da;
         DataView dv;
 
-        public Record()
+        public Achivements()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace Software
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            Achievement s = new Achievement();
+            UpdateRecord s = new UpdateRecord();
             s.Show();
         }
 

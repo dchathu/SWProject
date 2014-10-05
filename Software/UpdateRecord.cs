@@ -12,81 +12,50 @@ namespace Software
 {
     public partial class UpdateRecord : Form
     {
+
         static string conStr = Properties.Settings.Default.MainConString;
         static SqlConnection con = new SqlConnection(conStr);
-        SqlDataAdapter da;
-        DataTable dt;
-        int id;
 
-        public UpdateRecord(int Id)
+        public UpdateRecord()
         {
             InitializeComponent();
-            this.id = Id;
         }
-
-        private void UpdateRecord_Load(object sender, EventArgs e)
+     
+        public void Reset()
         {
-            con.Open();
-            da = new SqlDataAdapter();
-            da.SelectCommand = new SqlCommand("SELECT*FROM Schedule WHERE SId=@id", con);
-            da.SelectCommand.Parameters.AddWithValue("@id", id);
-            dt=new DataTable();
-            da.Fill(dt);
-
-            txtDate.Text = Convert.ToDateTime(dt.Rows[0].ItemArray[1].ToString()).ToShortDateString();
-            txtSchedule.Text = dt.Rows[0].ItemArray[2].ToString();
-            txtRemarks.Text = dt.Rows[0].ItemArray[3].ToString();
-            txtTime.Text = dt.Rows[0].ItemArray[4].ToString();
-            txtVenue.Text = dt.Rows[0].ItemArray[5].ToString();
-
-            con.Close();
-
-        }
-
+           comboBox1.Text = "";
+           comboBox2.Text = "";
+           textBox1.Text = "";
+           textBox2.Text = "";
+           textBox3.Text = "";
+           textBox4.Text = "";
+       }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+           this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAddStaff_Click(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 con.Open();
+                SqlCommand myCommand = new SqlCommand("SELECT * FROM Sports WHERE Event=@Event AND Year=@year", con);
+                myCommand.Parameters.AddWithValue("@Event", comboBox1.SelectedItem.ToString());
+                myCommand.Parameters.AddWithValue("@Year", comboBox2.SelectedItem.ToString());
 
-                SqlCommand myCommand = new SqlCommand("UPDATE Schedule SET Date=@Date,Schedule=@Schedule,Remarks=@Remarks,Time=@Time,Venue=@Venue WHERE SId=@Id", con);
-                myCommand.Parameters.AddWithValue("@Date", txtDate.Text.ToString());
-                myCommand.Parameters.AddWithValue("@Schedule", txtSchedule.Text.ToString());
-                myCommand.Parameters.AddWithValue("@Remarks", txtRemarks.Text.ToString());
-                myCommand.Parameters.AddWithValue("@Time", txtTime.Text.ToString());
-                myCommand.Parameters.AddWithValue("@Venue", txtVenue.Text.ToString());
-                myCommand.Parameters.AddWithValue("@Id", id);
-
-                myCommand.ExecuteNonQuery();
+                SqlDataReader myReader = myCommand.ExecuteReader();
+                while (myReader.Read())
+                {
+                    textBox1.Text = myReader.GetValue(2).ToString();
+                    textBox2.Text = myReader.GetValue(3).ToString();
+                    textBox3.Text = myReader.GetValue(4).ToString();
+                    textBox4.Text = myReader.GetValue(5).ToString();
+                }
+                myReader.Close();
+                myReader.Dispose();
                 con.Close();
-
-                MessageBox.Show("Successfully Updated!!!");
             }
             catch (Exception ex)
             {
@@ -94,40 +63,31 @@ namespace Software
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure???", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
                 con.Open();
-                SqlCommand myCommand = new SqlCommand("DELETE FROM Schedule WHERE SId=@Id", con);
 
-                myCommand.Parameters.AddWithValue("@Id", id);
+                SqlCommand myCommand = new SqlCommand("UPDATE Sports SET First=@First,Second=@Second,Third=@Third,Record=@Record WHERE Event=@Event AND Year=@Year", con);
+                myCommand.Parameters.AddWithValue("@Event", comboBox1.SelectedItem.ToString());
+                myCommand.Parameters.AddWithValue("@year", comboBox2.SelectedItem.ToString());
+                myCommand.Parameters.AddWithValue("@first", textBox1.Text.ToString());
+                myCommand.Parameters.AddWithValue("@Second", textBox2.Text.ToString());
+                myCommand.Parameters.AddWithValue("@Third", textBox3.Text.ToString());
+                myCommand.Parameters.AddWithValue("@Record", textBox4.Text.ToString());
+
                 myCommand.ExecuteNonQuery();
                 con.Close();
-
-                MessageBox.Show("Record is deleted!!");
+                MessageBox.Show("Successfully Updated!!!");
+                Reset();
             }
-        }
-
-        private void UpdateRecord_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Schedule sc = (Schedule)Application.OpenForms["Schedule"];
-            if (sc != null)
+            catch (Exception ex)
             {
-                sc.TopMost = true;
-                sc.LoadSchedule(sc.dtpSt.Value, sc.dtpEn.Value);
+                MessageBox.Show(ex.Message);
             }
-            else
-            {
-                Schedule s = new Schedule();
-                s.Show();
-            }
-        }
 
-        private void UpdateRecord_Activated(object sender, EventArgs e)
-        {
-            this.TopMost = false;
         }
-
+             
     }
 }

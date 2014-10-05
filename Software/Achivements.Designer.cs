@@ -1,6 +1,6 @@
 ﻿namespace Software
 {
-    partial class Record
+    partial class Achivements
     {
         /// <summary>
         /// Required designer variable.
