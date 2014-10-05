@@ -28,14 +28,12 @@ namespace Software
      
         public void Reset()
         {
-          
            txtFirst.Text = "";
            txtScnd.Text = "";
            txtThrd.Text = "";
            txtRecd.Text = "";
-       }
+        }
 
-       
         private void Achievement_Load(object sender, EventArgs e)
         {
             
@@ -62,7 +60,7 @@ namespace Software
             }
             catch (Exception ex)
             {
-               
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -71,7 +69,6 @@ namespace Software
             this.Close();
         }
 
-       
         private void UpdtRecord()
         {
             con.Open();
@@ -91,7 +88,7 @@ namespace Software
 
                     if (Convert.ToInt32(dt.Rows[0].ItemArray[3].ToString()) < Convert.ToInt32(txtRecd.Text.ToString()))
                     {
-                        da.UpdateCommand = new SqlCommand("UPDATE BestRecord SET Record=@Record,Owner=@Name,Year=@Yea WHERE Event=@Event", con);
+                        da.UpdateCommand = new SqlCommand("UPDATE BestRecord SET Record=@Record,Owner=@Name,Year=@Year WHERE Event=@Event", con);
                         da.UpdateCommand.Parameters.AddWithValue("@Event", Event);
                         da.UpdateCommand.Parameters.AddWithValue("@Name", txtFirst.Text.ToString());
                         da.UpdateCommand.Parameters.AddWithValue("@Year", txtYear.Text.ToString());
@@ -139,6 +136,7 @@ namespace Software
             if (rc != null)
             {
                 rc.TopMost = true;
+                rc.LoadRecords();
             }
         }
 
@@ -146,9 +144,7 @@ namespace Software
         {
             try
             {
-                
                 UpdtRecord();
-                MessageBox.Show("second");
                 con.Open();
                 SqlCommand myCommand = new SqlCommand("UPDATE Sports SET First=@First,Second=@Second,Third=@Third,Record=@Record,BstRecord=@bstRec WHERE RecordId=@rId", con);
                 myCommand.Parameters.AddWithValue("@rId", recordId);
@@ -166,7 +162,7 @@ namespace Software
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
              

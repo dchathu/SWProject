@@ -33,8 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvAch = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,10 +44,12 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvAch = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -57,6 +57,8 @@
             this.panel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -113,33 +115,6 @@
             this.textBox1.Size = new System.Drawing.Size(768, 20);
             this.textBox1.TabIndex = 89;
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dgvAch);
-            this.panel4.Location = new System.Drawing.Point(3, 70);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(852, 362);
-            this.panel4.TabIndex = 1;
-            // 
-            // dgvAch
-            // 
-            this.dgvAch.AllowUserToAddRows = false;
-            this.dgvAch.AllowUserToDeleteRows = false;
-            this.dgvAch.AllowUserToOrderColumns = true;
-            this.dgvAch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAch.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAch.EnableHeadersVisualStyles = false;
-            this.dgvAch.Location = new System.Drawing.Point(3, 3);
-            this.dgvAch.MultiSelect = false;
-            this.dgvAch.Name = "dgvAch";
-            this.dgvAch.ReadOnly = true;
-            this.dgvAch.RowHeadersVisible = false;
-            this.dgvAch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAch.Size = new System.Drawing.Size(844, 354);
-            this.dgvAch.TabIndex = 45;
             // 
             // panel3
             // 
@@ -251,6 +226,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "Best Records";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -262,13 +238,63 @@
             this.panel5.Size = new System.Drawing.Size(884, 561);
             this.panel5.TabIndex = 17;
             // 
-            // Record
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 342);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Event Record";
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(7, 339);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(47, 18);
+            this.button3.TabIndex = 48;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dgvAch);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(3, 70);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(852, 362);
+            this.panel4.TabIndex = 1;
+            // 
+            // dgvAch
+            // 
+            this.dgvAch.AllowUserToAddRows = false;
+            this.dgvAch.AllowUserToDeleteRows = false;
+            this.dgvAch.AllowUserToOrderColumns = true;
+            this.dgvAch.AllowUserToResizeColumns = false;
+            this.dgvAch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAch.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvAch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAch.EnableHeadersVisualStyles = false;
+            this.dgvAch.Location = new System.Drawing.Point(3, 3);
+            this.dgvAch.Name = "dgvAch";
+            this.dgvAch.ReadOnly = true;
+            this.dgvAch.RowHeadersVisible = false;
+            this.dgvAch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAch.Size = new System.Drawing.Size(844, 330);
+            this.dgvAch.TabIndex = 49;
+            // 
+            // Achivements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.panel5);
-            this.Name = "Record";
+            this.Name = "Achivements";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archivements";
             this.Activated += new System.EventHandler(this.Record_Activated);
@@ -277,8 +303,6 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -287,6 +311,9 @@
             this.panel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,11 +322,9 @@
 
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvAch;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
@@ -311,5 +336,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvAch;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }

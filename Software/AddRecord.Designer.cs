@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
+            this.txtRecd = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFirst = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,10 +59,10 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // cmbYear
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Items.AddRange(new object[] {
             "2009",
             "2010",
             "2011",
@@ -73,17 +73,17 @@
             "2016",
             "2017",
             "2018"});
-            this.comboBox2.Location = new System.Drawing.Point(19, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(164, 21);
-            this.comboBox2.TabIndex = 29;
+            this.cmbYear.Location = new System.Drawing.Point(19, 71);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(164, 21);
+            this.cmbYear.TabIndex = 29;
             // 
-            // textBox4
+            // txtRecd
             // 
-            this.textBox4.Location = new System.Drawing.Point(317, 225);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 20);
-            this.textBox4.TabIndex = 27;
+            this.txtRecd.Location = new System.Drawing.Point(317, 225);
+            this.txtRecd.Name = "txtRecd";
+            this.txtRecd.Size = new System.Drawing.Size(229, 20);
+            this.txtRecd.TabIndex = 27;
             // 
             // textBox3
             // 
@@ -99,12 +99,12 @@
             this.textBox2.Size = new System.Drawing.Size(229, 20);
             this.textBox2.TabIndex = 25;
             // 
-            // textBox1
+            // txtFirst
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 20);
-            this.textBox1.TabIndex = 24;
+            this.txtFirst.Location = new System.Drawing.Point(18, 144);
+            this.txtFirst.Name = "txtFirst";
+            this.txtFirst.Size = new System.Drawing.Size(229, 20);
+            this.txtFirst.TabIndex = 24;
             // 
             // comboBox1
             // 
@@ -126,15 +126,16 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(229, 21);
             this.comboBox1.TabIndex = 18;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.cmbYear);
+            this.panel1.Controls.Add(this.txtRecd);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtFirst);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblSubject);
             this.panel1.Controls.Add(this.lblType);
@@ -328,11 +329,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cmbYear;
+        private System.Windows.Forms.TextBox txtRecd;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFirst;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
