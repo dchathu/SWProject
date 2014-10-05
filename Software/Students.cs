@@ -27,28 +27,25 @@ namespace Software
 
         private void Students_Load(object sender, EventArgs e)
         {
-            dataGridView1.EnableHeadersVisualStyles = false;
-           //dataGridView1.b
-            // dataGridView1.cells
+           
+           
             if (Login.usr == 1)
             {
-                btnUpdate.Visible = false;
-                BtnRemove.Visible = false;
+                
             }
             else if (Login.usr == 2)
             {
-                btnAdd.Visible = false;
-                btnUpdate.Visible = false;
-                BtnRemove.Visible = false;
+                
             }
 
             con.Open();
             da = new SqlDataAdapter();
-            da.SelectCommand = new SqlCommand("SELECT*FROM StudentDetails", con);
+            da.SelectCommand = new SqlCommand("SELECT Title,FirstName,LastName,RegNo,AcedemicCourse,ContactNumber FROM StudentDetails", con);
             dt = new DataTable();
             da.Fill(dt);
             dv = dt.DefaultView;
             dataGridView1.DataSource = dv;
+            dataGridView1.Columns[0].Width = 50;
             con.Close();
         }
 
@@ -56,26 +53,22 @@ namespace Software
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ReportStudents s = new ReportStudents();
-            s.Show();
+           
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddStudent s = new AddStudent();
-            s.Show();
+           
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateStudent s = new UpdateStudent();
-            s.Show();
+            
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
         {
-            Delete s = new Delete();
-            s.Show();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,6 +114,98 @@ namespace Software
             {
                 cp.TopMost = true;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ReportStudents rs = (ReportStudents)Application.OpenForms["ReportStudents"];
+            if (rs != null)
+            {
+                rs.TopMost = true;
+            }
+
+            else
+            {
+                ReportStudents s = new ReportStudents();
+                s.Show();
+            }
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddStudent ast=(AddStudent)Application.OpenForms["AddStudent"];
+            if (ast != null)
+            {
+                ast.TopMost = true;
+            }
+            else
+            {
+                AddStudent s = new AddStudent();
+                s.Show();
+            }   
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            UpdateStudent us = (UpdateStudent)Application.OpenForms["UpdateStudent"];
+            if (us != null)
+            {
+                us.TopMost = true;
+            }
+            else
+            {
+                UpdateStudent s = new UpdateStudent();
+                s.Show();
+            }
+            
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Delete ds = (Delete)Application.OpenForms["Delete"];
+            if (ds != null)
+            {
+                ds.TopMost = true;
+            }
+            else
+            {
+                Delete s = new Delete();
+                s.Show();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            string outInfo = "";
+            string[] keywords = textBox1.Text.Split(' ');
+
+            foreach (string word in keywords)
+            {
+                if (outInfo.Length == 0)
+                {
+                    
+
+                    outInfo = "(FirstName LIKE '%" + word + "%' OR LastName LIKE '%" + word + "%' OR AcedemicCourse LIKE '%" + word + "%')";
+                }
+
+                else
+                {
+                    outInfo += " AND (FirstName LIKE '%" + word + "%' OR LastName LIKE '%" + word + "%' OR AcedemicCourse LIKE '%" + word + "%')";
+                }
+            }
+
+            dv.RowFilter = outInfo;
         }
 
     }

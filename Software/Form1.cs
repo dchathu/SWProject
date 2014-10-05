@@ -384,11 +384,7 @@ namespace Software
             
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            AddUsers adusr = new AddUsers();
-            adusr.Show();
-        }
+       
 
         private void button13_Click(object sender, EventArgs e)
         {

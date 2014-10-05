@@ -133,12 +133,6 @@
     <Compile Include="AddSchedule.Designer.cs">
       <DependentUpon>AddSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddUsers.Designer.cs">
-      <DependentUpon>AddUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Champion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +176,6 @@
     </Compile>
     <Compile Include="IncomeStats.Designer.cs">
       <DependentUpon>IncomeStats.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginRegister.Designer.cs">
-      <DependentUpon>LoginRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -350,9 +338,6 @@
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddUsers.resx">
-      <DependentUpon>AddUsers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Champion.resx">
       <DependentUpon>Champion.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,9 +356,6 @@
     <EmbeddedResource Include="IncomeStats.resx">
       <DependentUpon>IncomeStats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginRegister.resx">
-      <DependentUpon>LoginRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginTemp.resx">
       <DependentUpon>LoginTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhotoViewer.resx">
       <DependentUpon>PhotoViewer.cs</DependentUpon>

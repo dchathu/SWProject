@@ -37,9 +37,9 @@
             // albumsDataGridView
             // 
             this.albumsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.albumsDataGridView.Location = new System.Drawing.Point(729, 389);
+            this.albumsDataGridView.Location = new System.Drawing.Point(494, 198);
             this.albumsDataGridView.Name = "albumsDataGridView";
-            this.albumsDataGridView.Size = new System.Drawing.Size(30, 12);
+            this.albumsDataGridView.Size = new System.Drawing.Size(143, 139);
             this.albumsDataGridView.TabIndex = 2;
             this.albumsDataGridView.Visible = false;
             // 
@@ -61,11 +61,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.label1.Location = new System.Drawing.Point(318, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 24);
+            this.label1.Size = new System.Drawing.Size(86, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Albums";
             // 
@@ -73,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(783, 526);
             this.Controls.Add(this.label1);

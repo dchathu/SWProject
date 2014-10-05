@@ -18,96 +18,62 @@ namespace Software
         static string conStr = Properties.Settings.Default.MainConString;
         public static SqlConnection con = new SqlConnection(conStr);
         SqlDataAdapter da;
+        DataTable dtTE;
+        int iNum = 0;
         public static string st,ap,d;
-
-
+        public System.Windows.Forms.Timer ti = new System.Windows.Forms.Timer();
 
         public CoverPage()
         {
-            InitializeComponent();            
+            InitializeComponent();   
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ti_Tick(object sender, EventArgs e)
         {
-            Students st = (Students)Application.OpenForms["Students"];
-            if (st != null)
-            {
-                st.TopMost = true;
-            }
-            else
-            {
-                Students s = new Students();
-                s.Show();
-            }
-            
+            checkTodayEvents();
         }
 
-        private void form_FormClosed(object sender, FormClosedEventArgs e)
+        private void checkTodayEvents()
         {
-            this.Dispose();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            Staff st = (Staff)Application.OpenForms["Staff"];
-            if (st != null)
-                st.TopMost = true;
-            else
+            if (dtTE.Rows.Count > 0 && dtTE.Rows.Count>=iNum)
             {
-                Staff s = new Staff();
-                s.Show();
-            }
-            
-        }
+                lblToday.Text = dtTE.Rows[iNum].ItemArray[1].ToString() + " Is scheduled to today!!!";
+                iNum++;
 
-       
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Inventories iv = (Inventories)Application.OpenForms["Inventories"];
-            if (iv != null)
-            {
-                iv.TopMost = true;
+                if (iNum == dtTE.Rows.Count)
+                {
+                    iNum = 0;
+                }
             }
-
-            else
-            {
-                Inventories ivn = new Inventories();
-                ivn.Show();
-            }
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Schedule sc = (Schedule)Application.OpenForms["Schedule"];
-            if (sc != null)
-            {
-                sc.TopMost = true;
-            }
-
-            else
-            {
-                Schedule s= new Schedule();
-                s.Show();
-            }
-            
         }
         
         private void CoverPage_Load(object sender, EventArgs e)
         {
+            
+
             if (Properties.Settings.Default.UserType == "Admin")
                 lnkManageusers.Visible = true;
             lblUserName.Text = Properties.Settings.Default.User.ToString();
             dtpEn.Value = DateTime.Today.AddMonths(+1);
             dtpSt.Value = DateTime.Today.AddDays(-1);
             LoadEvents(dtpSt.Value, dtpEn.Value);
+            if (dtTE.Rows.Count > 0)
+            {
+                ti.Tick += ti_Tick;
+                ti.Interval = 5000;
+                ti.Enabled = true;
+            }
+
+            else
+            {
+                lblToday.Text = "No any event scheduled to today";
+            }
         }
 
         #region Load Events
         private void LoadEvents(DateTime dtSt, DateTime dtEn)
         {
-            //con.Open();
+            con.Open();
 
             da = new SqlDataAdapter();
             da.SelectCommand = new SqlCommand("SELECT Date,Schedule,Remarks,Time,Venue FROM Schedule WHERE Date >= @stDt AND Date <=@enDt", con);
@@ -116,112 +82,40 @@ namespace Software
 
             DataTable dt = new DataTable();
             dt.Clear();
-         //   da.Fill(dt);
+            da.Fill(dt);
             con.Close();
             DataTable dtUE = new DataTable();
-            DataTable dtUID = new DataTable();
+            dtTE = new DataTable();
             dtUE = dt.Clone();
-            dtUID = dt.Clone();
+            dtTE = dt.Clone();
 
             foreach (DataRow row in dt.Rows)
             {
-                
                 if (Convert.ToDateTime(row.ItemArray[0]).ToShortDateString() == DateTime.Today.ToShortDateString())
                 {
-                    lblToday.Text = row.ItemArray[1].ToString() + " Is scheduled to today!!!";
+                    dtTE.ImportRow(row);
                 }
-
-                if (row.ItemArray[2].ToString() == "Event")
-                {
-                    dtUE.ImportRow(row);
-                }
-
-                else if (row.ItemArray[2].ToString() == "Important Day")
-                {
-                    dtUID.ImportRow(row);
-                }
+                
+                dtUE.ImportRow(row);
             }
-            dgv1.DataSource = dtUE;
-            dgvUID.DataSource = dtUID;
+
+            dataGridView3.DataSource = dtUE;
+            dataGridView2.DataSource = dtTE;
+
         }
         #endregion
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Record rc = (Record)Application.OpenForms["Record"];
-            if (rc != null)
-            {
-                rc.TopMost = true;
-            }
-            else
-            {
-                Record rcn = new Record();
-                rcn.Show();
-            }
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-            LoginRegister lg = (LoginRegister)Application.OpenForms["LoginRegister"];
-            if (lg != null)
-            {
-                lg.TopMost = true;
-            }
-            else
-            {
-                LoginRegister lgn = new LoginRegister();
-                lgn.Show();
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Gallery gl = (Gallery)Application.OpenForms["Gallery"];
-            if (gl != null)
-            {
-                gl.TopMost = true;
-            }
-            else
-            {
-                Gallery gln = new Gallery();
-                gln.Show();
-            }
-        }
 
         private void CoverPage_Activated(object sender, EventArgs e)
         {
             this.TopMost = false;
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            Form1 ac = (Form1)Application.OpenForms["Form1"];
-            if (ac != null)
-            {
-                ac.TopMost = true;
-            }
-            else
-            {
-                Form1 acn = new Form1();
-                acn.Show();
-            }
-        }
+       
 
         private void dtpEn_ValueChanged(object sender, EventArgs e)
         {
           
-        }
-
-        private void btnFilter_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -265,9 +159,119 @@ namespace Software
             l.Show();
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
+        private void btnAchvmnt_Click(object sender, EventArgs e)
         {
 
+            Record rc = (Record)Application.OpenForms["Record"];
+            if (rc != null)
+            {
+                rc.TopMost = true;
+            }
+            else
+            {
+                Record rcn = new Record();
+                rcn.Show();
+            }
+        }
+
+        private void btnStudents_Click(object sender, EventArgs e)
+        {
+            Students st = (Students)Application.OpenForms["Students"];
+            if (st != null)
+            {
+                st.TopMost = true;
+            }
+            else
+            {
+                Students s = new Students();
+                s.Show();
+            }
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+
+            Staff st = (Staff)Application.OpenForms["Staff"];
+            if (st != null)
+                st.TopMost = true;
+            else
+            {
+                Staff s = new Staff();
+                s.Show();
+            }
+            
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            Inventories iv = (Inventories)Application.OpenForms["Inventories"];
+            if (iv != null)
+            {
+                iv.TopMost = true;
+            }
+
+            else
+            {
+                Inventories ivn = new Inventories();
+                ivn.Show();
+            }
+        }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            Schedule sc = (Schedule)Application.OpenForms["Schedule"];
+            if (sc != null)
+            {
+                sc.TopMost = true;
+            }
+
+            else
+            {
+                Schedule s = new Schedule();
+                s.Show();
+            }
+        }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            ManageUsers lg = (ManageUsers)Application.OpenForms["ManageUsers"];
+            if (lg != null)
+            {
+                lg.TopMost = true;
+            }
+            else
+            {
+                ManageUsers lgn = new ManageUsers();
+                lgn.Show();
+            }
+        }
+
+        private void btnGallery_Click(object sender, EventArgs e)
+        {
+            Gallery gl = (Gallery)Application.OpenForms["Gallery"];
+            if (gl != null)
+            {
+                gl.TopMost = true;
+            }
+            else
+            {
+                Gallery gln = new Gallery();
+                gln.Show();
+            }
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            Form1 ac = (Form1)Application.OpenForms["Form1"];
+            if (ac != null)
+            {
+                ac.TopMost = true;
+            }
+            else
+            {
+                Form1 acn = new Form1();
+                acn.Show();
+            }
         }       
     }
 }

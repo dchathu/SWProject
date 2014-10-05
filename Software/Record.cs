@@ -16,6 +16,7 @@ namespace Software
         static string conStr = Properties.Settings.Default.MainConString;
         static SqlConnection con = new SqlConnection(conStr);
         SqlDataAdapter da;
+        DataView dv;
 
         public Record()
         {
@@ -31,8 +32,8 @@ namespace Software
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 con.Close();
-
-                dgvAch.DataSource = dt;
+                dv = dt.DefaultView;
+                dgvAch.DataSource = dv;
             }
             catch (Exception ex)
             {
@@ -72,6 +73,27 @@ namespace Software
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            string outInfo = "";
+            string[] keywords = textBox1.Text.Split(' ');
+
+            foreach (string word in keywords)
+            {
+                if (outInfo.Length == 0)
+                {
+                    outInfo = "(Event LIKE '%" + word + "%' OR Year LIKE '%" + word + "%' OR First LIKE '%" + word + "%'OR Second LIKE '%" + word + "%'OR Third LIKE '%" + word + "%' )";
+                }
+
+                else
+                {
+                    outInfo += " AND (Event LIKE '%" + word + "%' OR Year LIKE '%" + word + "%' OR First LIKE '%" + word + "%'OR Second LIKE '%" + word + "%'OR Third LIKE '%" + word + "%' )";
+                }
+            }
+
+            dv.RowFilter = outInfo;
         }
 
 

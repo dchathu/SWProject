@@ -31,11 +31,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.dtpSt = new System.Windows.Forms.DateTimePicker();
-            this.dtpEn = new System.Windows.Forms.DateTimePicker();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvAch = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,11 +42,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -62,7 +60,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAdd.BackColor = System.Drawing.Color.Teal;
             this.btnAdd.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(184, 3);
@@ -87,59 +85,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel19);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(3, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(852, 40);
             this.panel1.TabIndex = 12;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.dtpSt);
-            this.panel19.Controls.Add(this.dtpEn);
-            this.panel19.Controls.Add(this.btnFilter);
-            this.panel19.Controls.Add(this.label9);
-            this.panel19.Location = new System.Drawing.Point(552, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Padding = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.panel19.Size = new System.Drawing.Size(295, 32);
-            this.panel19.TabIndex = 46;
-            // 
-            // dtpSt
-            // 
-            this.dtpSt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSt.Location = new System.Drawing.Point(124, 6);
-            this.dtpSt.Name = "dtpSt";
-            this.dtpSt.Size = new System.Drawing.Size(97, 20);
-            this.dtpSt.TabIndex = 45;
-            // 
-            // dtpEn
-            // 
-            this.dtpEn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEn.Location = new System.Drawing.Point(6, 6);
-            this.dtpEn.Name = "dtpEn";
-            this.dtpEn.Size = new System.Drawing.Size(97, 20);
-            this.dtpEn.TabIndex = 46;
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.Location = new System.Drawing.Point(227, 5);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(65, 23);
-            this.btnFilter.TabIndex = 8;
-            this.btnFilter.Text = "Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(105, 10);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "To";
             // 
             // panel4
             // 
@@ -168,7 +121,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel3.Controls.Add(this.label14);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -205,7 +159,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(86, 3);
@@ -236,7 +190,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.Teal;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,13 +205,42 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(884, 561);
             this.panel5.TabIndex = 17;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(79, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(768, 20);
+            this.textBox1.TabIndex = 89;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Search :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label14.Location = new System.Drawing.Point(10, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(99, 17);
+            this.label14.TabIndex = 91;
+            this.label14.Text = "Sport Records";
             // 
             // Record
             // 
@@ -271,10 +254,11 @@
             this.Load += new System.EventHandler(this.Record_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAch)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -294,11 +278,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvAch;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.DateTimePicker dtpSt;
-        private System.Windows.Forms.DateTimePicker dtpEn;
-        private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
@@ -306,5 +285,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label14;
     }
 }

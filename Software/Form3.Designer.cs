@@ -131,7 +131,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage6.Controls.Add(this.button3);
             this.tabPage6.Controls.Add(this.cmbRelation);
             this.tabPage6.Controls.Add(this.lblSalaryFam);
@@ -146,10 +146,10 @@
             this.tabPage6.Controls.Add(this.lblNameFam);
             this.tabPage6.Controls.Add(this.btnAddAnother);
             this.tabPage6.Controls.Add(this.label37);
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(722, 488);
+            this.tabPage6.Size = new System.Drawing.Size(722, 489);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
@@ -188,44 +188,44 @@
             // lblSalaryFam
             // 
             this.lblSalaryFam.AutoSize = true;
-            this.lblSalaryFam.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalaryFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalaryFam.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblSalaryFam.Location = new System.Drawing.Point(84, 307);
             this.lblSalaryFam.Name = "lblSalaryFam";
-            this.lblSalaryFam.Size = new System.Drawing.Size(56, 20);
+            this.lblSalaryFam.Size = new System.Drawing.Size(61, 22);
             this.lblSalaryFam.TabIndex = 70;
             this.lblSalaryFam.Text = "Salary";
             // 
             // lblJobFam
             // 
             this.lblJobFam.AutoSize = true;
-            this.lblJobFam.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJobFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJobFam.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblJobFam.Location = new System.Drawing.Point(104, 247);
             this.lblJobFam.Name = "lblJobFam";
-            this.lblJobFam.Size = new System.Drawing.Size(33, 20);
+            this.lblJobFam.Size = new System.Drawing.Size(39, 22);
             this.lblJobFam.TabIndex = 69;
             this.lblJobFam.Text = "Job";
             // 
             // lblRelationFam
             // 
             this.lblRelationFam.AutoSize = true;
-            this.lblRelationFam.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelationFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRelationFam.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblRelationFam.Location = new System.Drawing.Point(46, 194);
             this.lblRelationFam.Name = "lblRelationFam";
-            this.lblRelationFam.Size = new System.Drawing.Size(99, 20);
+            this.lblRelationFam.Size = new System.Drawing.Size(109, 22);
             this.lblRelationFam.TabIndex = 68;
             this.lblRelationFam.Text = "Relationship";
             // 
             // lblAgeFam
             // 
             this.lblAgeFam.AutoSize = true;
-            this.lblAgeFam.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeFam.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblAgeFam.Location = new System.Drawing.Point(98, 139);
             this.lblAgeFam.Name = "lblAgeFam";
-            this.lblAgeFam.Size = new System.Drawing.Size(39, 20);
+            this.lblAgeFam.Size = new System.Drawing.Size(42, 22);
             this.lblAgeFam.TabIndex = 67;
             this.lblAgeFam.Text = "Age";
             // 
@@ -282,11 +282,11 @@
             // lblNameFam
             // 
             this.lblNameFam.AutoSize = true;
-            this.lblNameFam.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameFam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameFam.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblNameFam.Location = new System.Drawing.Point(84, 87);
             this.lblNameFam.Name = "lblNameFam";
-            this.lblNameFam.Size = new System.Drawing.Size(57, 20);
+            this.lblNameFam.Size = new System.Drawing.Size(57, 22);
             this.lblNameFam.TabIndex = 56;
             this.lblNameFam.Text = "Name";
             // 
@@ -309,17 +309,17 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Teal;
             this.label37.Location = new System.Drawing.Point(292, 19);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(131, 23);
+            this.label37.Size = new System.Drawing.Size(147, 25);
             this.label37.TabIndex = 54;
             this.label37.Text = "Family Details";
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.richTextBox4);
             this.tabPage5.Controls.Add(this.label16);
@@ -332,10 +332,10 @@
             this.tabPage5.Controls.Add(this.textBox57);
             this.tabPage5.Controls.Add(this.textBox59);
             this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(722, 488);
+            this.tabPage5.Size = new System.Drawing.Size(722, 489);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
@@ -368,44 +368,44 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label16.Location = new System.Drawing.Point(87, 47);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(121, 20);
+            this.label16.Size = new System.Drawing.Size(130, 22);
             this.label16.TabIndex = 67;
             this.label16.Text = "Cultural events";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label26.Location = new System.Drawing.Point(42, 298);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(271, 20);
+            this.label26.Size = new System.Drawing.Size(284, 22);
             this.label26.TabIndex = 66;
             this.label26.Text = "Receiving any medical treatment? ";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label27.Location = new System.Drawing.Point(98, 246);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(104, 20);
+            this.label27.Size = new System.Drawing.Size(111, 22);
             this.label27.TabIndex = 65;
             this.label27.Text = "Facebook ID";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label28.Location = new System.Drawing.Point(91, 191);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(113, 20);
+            this.label28.Size = new System.Drawing.Size(123, 22);
             this.label28.TabIndex = 64;
             this.label28.Text = "Email address";
             // 
@@ -423,11 +423,11 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.ForeColor = System.Drawing.Color.MidnightBlue;
             this.radioButton5.Location = new System.Drawing.Point(115, 9);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(49, 24);
+            this.radioButton5.Size = new System.Drawing.Size(51, 26);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "No";
@@ -437,11 +437,11 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton6.ForeColor = System.Drawing.Color.MidnightBlue;
             this.radioButton6.Location = new System.Drawing.Point(12, 9);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(52, 24);
+            this.radioButton6.Size = new System.Drawing.Size(59, 26);
             this.radioButton6.TabIndex = 0;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Yes";
@@ -487,17 +487,17 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label35.Location = new System.Drawing.Point(139, 132);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(59, 20);
+            this.label35.Size = new System.Drawing.Size(65, 22);
             this.label35.TabIndex = 56;
             this.label35.Text = "District";
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.richTextBox3);
             this.tabPage3.Controls.Add(this.richTextBox2);
@@ -516,10 +516,10 @@
             this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.lblSchool);
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(722, 488);
+            this.tabPage3.Size = new System.Drawing.Size(722, 489);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -569,33 +569,33 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
             this.label15.Location = new System.Drawing.Point(40, 418);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 20);
+            this.label15.Size = new System.Drawing.Size(112, 22);
             this.label15.TabIndex = 13;
             this.label15.Text = "Major games";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Navy;
             this.label14.Location = new System.Drawing.Point(69, 336);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 20);
+            this.label14.Size = new System.Drawing.Size(78, 22);
             this.label14.TabIndex = 12;
             this.label14.Text = "Athletics";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(35, 254);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.Size = new System.Drawing.Size(118, 22);
             this.label3.TabIndex = 11;
             this.label3.Text = "Indoor games";
             // 
@@ -653,22 +653,22 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Navy;
             this.label7.Location = new System.Drawing.Point(360, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 20);
+            this.label7.Size = new System.Drawing.Size(61, 22);
             this.label7.TabIndex = 7;
             this.label7.Text = "Result";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
             this.label6.Location = new System.Drawing.Point(149, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.Size = new System.Drawing.Size(70, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "Subject";
             // 
@@ -779,11 +779,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
             this.label5.Location = new System.Drawing.Point(56, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 20);
+            this.label5.Size = new System.Drawing.Size(95, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "A/L results";
             // 
@@ -850,17 +850,17 @@
             // lblSchool
             // 
             this.lblSchool.AutoSize = true;
-            this.lblSchool.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSchool.ForeColor = System.Drawing.Color.Navy;
             this.lblSchool.Location = new System.Drawing.Point(16, 26);
             this.lblSchool.Name = "lblSchool";
-            this.lblSchool.Size = new System.Drawing.Size(131, 20);
+            this.lblSchool.Size = new System.Drawing.Size(142, 22);
             this.lblSchool.TabIndex = 0;
             this.lblSchool.Text = "School Attended";
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.radioButton2);
             this.tabPage2.Controls.Add(this.radioButton1);
@@ -880,10 +880,10 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.lblContactNo);
             this.tabPage2.Controls.Add(this.lblNIC);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(722, 488);
+            this.tabPage2.Size = new System.Drawing.Size(722, 489);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -906,11 +906,11 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.radioButton2.Location = new System.Drawing.Point(361, 362);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 24);
+            this.radioButton2.Size = new System.Drawing.Size(51, 26);
             this.radioButton2.TabIndex = 56;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "No";
@@ -920,11 +920,11 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.radioButton1.Location = new System.Drawing.Point(245, 361);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 24);
+            this.radioButton1.Size = new System.Drawing.Size(59, 26);
             this.radioButton1.TabIndex = 55;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Yes";
@@ -934,11 +934,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label13.Location = new System.Drawing.Point(32, 362);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(198, 20);
+            this.label13.Size = new System.Drawing.Size(220, 22);
             this.label13.TabIndex = 54;
             this.label13.Text = "Receiving Hostel Facilities";
             // 
@@ -961,11 +961,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label12.Location = new System.Drawing.Point(91, 306);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(139, 20);
+            this.label12.Size = new System.Drawing.Size(151, 22);
             this.label12.TabIndex = 52;
             this.label12.Text = "Academic Course";
             // 
@@ -987,22 +987,22 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label11.Location = new System.Drawing.Point(100, 253);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 20);
+            this.label11.Size = new System.Drawing.Size(131, 22);
             this.label11.TabIndex = 50;
             this.label11.Text = "Academic Year";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(119, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 20);
+            this.label2.Size = new System.Drawing.Size(110, 22);
             this.label2.TabIndex = 49;
             this.label2.Text = "Date of Birth";
             // 
@@ -1054,22 +1054,22 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblAddress.Location = new System.Drawing.Point(74, 40);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(156, 20);
+            this.lblAddress.Size = new System.Drawing.Size(168, 22);
             this.lblAddress.TabIndex = 46;
             this.lblAddress.Text = "Permanent Address";
             // 
             // lblRoomNo
             // 
             this.lblRoomNo.AutoSize = true;
-            this.lblRoomNo.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomNo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblRoomNo.Location = new System.Drawing.Point(472, 364);
             this.lblRoomNo.Name = "lblRoomNo";
-            this.lblRoomNo.Size = new System.Drawing.Size(81, 20);
+            this.lblRoomNo.Size = new System.Drawing.Size(85, 22);
             this.lblRoomNo.TabIndex = 42;
             this.lblRoomNo.Text = "Room No";
             this.lblRoomNo.Visible = false;
@@ -1086,28 +1086,28 @@
             // lblContactNo
             // 
             this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactNo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblContactNo.Location = new System.Drawing.Point(136, 151);
             this.lblContactNo.Name = "lblContactNo";
-            this.lblContactNo.Size = new System.Drawing.Size(94, 20);
+            this.lblContactNo.Size = new System.Drawing.Size(100, 22);
             this.lblContactNo.TabIndex = 37;
             this.lblContactNo.Text = "Contact No";
             // 
             // lblNIC
             // 
             this.lblNIC.AutoSize = true;
-            this.lblNIC.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNIC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNIC.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblNIC.Location = new System.Drawing.Point(161, 110);
             this.lblNIC.Name = "lblNIC";
-            this.lblNIC.Size = new System.Drawing.Size(64, 20);
+            this.lblNIC.Size = new System.Drawing.Size(68, 22);
             this.lblNIC.TabIndex = 30;
             this.lblNIC.Text = "NIC No";
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.comboBox10);
             this.tabPage1.Controls.Add(this.label10);
@@ -1124,10 +1124,10 @@
             this.tabPage1.Controls.Add(this.txtFirstName);
             this.tabPage1.Controls.Add(this.lblLastName);
             this.tabPage1.Controls.Add(this.lblFirstName);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(722, 488);
+            this.tabPage1.Size = new System.Drawing.Size(722, 489);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -1164,11 +1164,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label10.Location = new System.Drawing.Point(455, 325);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 20);
+            this.label10.Size = new System.Drawing.Size(70, 22);
             this.label10.TabIndex = 59;
             this.label10.Text = "Gender";
             // 
@@ -1190,11 +1190,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label9.Location = new System.Drawing.Point(66, 381);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(141, 20);
+            this.label9.Size = new System.Drawing.Size(150, 22);
             this.label9.TabIndex = 57;
             this.label9.Text = "Mother Language";
             // 
@@ -1217,11 +1217,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label8.Location = new System.Drawing.Point(130, 325);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 20);
+            this.label8.Size = new System.Drawing.Size(75, 22);
             this.label8.TabIndex = 55;
             this.label8.Text = "Religion";
             // 
@@ -1244,11 +1244,11 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblTitle.Location = new System.Drawing.Point(154, 98);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(41, 20);
+            this.lblTitle.Size = new System.Drawing.Size(45, 22);
             this.lblTitle.TabIndex = 52;
             this.lblTitle.Text = "Title";
             // 
@@ -1262,27 +1262,26 @@
             this.txtRegNo.TextChanged += new System.EventHandler(this.txtRegNo_TextChanged);
             this.txtRegNo.Leave += new System.EventHandler(this.txtRegNo_Leave);
             this.txtRegNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtRegNo_Validating);
-          //  this.txtRegNo.Validated += new System.EventHandler(this.txtRegNo_Validated);
             // 
             // lblRegNo
             // 
             this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegNo.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblRegNo.Location = new System.Drawing.Point(81, 264);
             this.lblRegNo.Name = "lblRegNo";
-            this.lblRegNo.Size = new System.Drawing.Size(124, 20);
+            this.lblRegNo.Size = new System.Drawing.Size(134, 22);
             this.lblRegNo.TabIndex = 49;
             this.lblRegNo.Text = "Registration No";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(279, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 24);
+            this.label1.Size = new System.Drawing.Size(171, 26);
             this.label1.TabIndex = 47;
             this.label1.Text = "Personal Details";
             // 
@@ -1305,22 +1304,22 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblLastName.Location = new System.Drawing.Point(109, 213);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(92, 20);
+            this.lblLastName.Size = new System.Drawing.Size(96, 22);
             this.lblLastName.TabIndex = 23;
             this.lblLastName.Text = "Last Name";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Berlin Sans FB", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblFirstName.Location = new System.Drawing.Point(109, 160);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(93, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(97, 22);
             this.lblFirstName.TabIndex = 21;
             this.lblFirstName.Text = "First Name";
             // 
@@ -1332,7 +1331,7 @@
             this.Family.Controls.Add(this.tabPage3);
             this.Family.Controls.Add(this.tabPage5);
             this.Family.Controls.Add(this.tabPage6);
-            this.Family.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Family.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Family.Location = new System.Drawing.Point(3, 3);
             this.Family.Name = "Family";
             this.Family.SelectedIndex = 0;
