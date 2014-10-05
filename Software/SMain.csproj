@@ -74,11 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Achievement.cs">
+    <Compile Include="UpdateRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Achievement.Designer.cs">
-      <DependentUpon>Achievement.cs</DependentUpon>
+    <Compile Include="UpdateRecord.Designer.cs">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="AchievementDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -216,11 +216,11 @@
     <Compile Include="PhotoViewer.Designer.cs">
       <DependentUpon>PhotoViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Record.cs">
+    <Compile Include="Achivements.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Record.Designer.cs">
-      <DependentUpon>Record.cs</DependentUpon>
+    <Compile Include="Achivements.Designer.cs">
+      <DependentUpon>Achivements.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -278,11 +278,11 @@
     <Compile Include="UpdateInventory.Designer.cs">
       <DependentUpon>UpdateInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateRecord.cs">
+    <Compile Include="UpdateSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateRecord.Designer.cs">
-      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    <Compile Include="UpdateSchedule.Designer.cs">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStaff.cs">
       <SubType>Form</SubType>
@@ -302,14 +302,20 @@
     <Compile Include="viewAccounts.Designer.cs">
       <DependentUpon>viewAccounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewBestSprtRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewBestSprtRecords.Designer.cs">
+      <DependentUpon>viewBestSprtRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Viewphoto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Viewphoto.Designer.cs">
       <DependentUpon>Viewphoto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Achievement.resx">
-      <DependentUpon>Achievement.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateRecord.resx">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddAcount.resx">
       <DependentUpon>AddAcount.cs</DependentUpon>
@@ -374,8 +380,8 @@
     <EmbeddedResource Include="PhotoViewer.resx">
       <DependentUpon>PhotoViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Record.resx">
-      <DependentUpon>Record.cs</DependentUpon>
+    <EmbeddedResource Include="Achivements.resx">
+      <DependentUpon>Achivements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -414,8 +420,8 @@
     <EmbeddedResource Include="UpdateInventory.resx">
       <DependentUpon>UpdateInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateRecord.resx">
-      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateSchedule.resx">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaff.resx">
       <DependentUpon>UpdateStaff.cs</DependentUpon>
@@ -425,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewAccounts.resx">
       <DependentUpon>viewAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewBestSprtRecords.resx">
+      <DependentUpon>viewBestSprtRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Viewphoto.resx">
       <DependentUpon>Viewphoto.cs</DependentUpon>

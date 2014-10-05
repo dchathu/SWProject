@@ -77,7 +77,7 @@ namespace Software
         {
             butn = 2;
             combo = 1;
-            UpdateRecord s = new UpdateRecord(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
+            UpdateSchedule s = new UpdateSchedule(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
             s.Show();
         }
 
@@ -112,13 +112,13 @@ namespace Software
         {
             if (dgvSch.SelectedRows.Count == 1)
             {
-                UpdateRecord r = (UpdateRecord)Application.OpenForms["UpdateRecord"];
+                UpdateSchedule r = (UpdateSchedule)Application.OpenForms["UpdateRecord"];
                 if(r!=null){
                     r.TopMost = true;
                 }
                 else
                 {
-                    UpdateRecord s = new UpdateRecord(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
+                    UpdateSchedule s = new UpdateSchedule(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
                     s.Show();
                     
                 }
@@ -150,7 +150,7 @@ namespace Software
         {
             butn = 2;
             combo = 1;
-            UpdateRecord s = new UpdateRecord(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
+            UpdateSchedule s = new UpdateSchedule(Convert.ToInt16(dgvSch.SelectedRows[0].Cells[0].Value));
             s.Show();
         }
 

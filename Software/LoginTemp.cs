@@ -40,7 +40,6 @@ namespace Software
             {
                 Properties.Settings.Default.User = getuser;
                 Properties.Settings.Default.UserType = dt.Rows[0].ItemArray[3].ToString().Trim();
-                MessageBox.Show(Properties.Settings.Default.UserType.ToString());
                 CoverPage cs = new CoverPage();
                 cs.Show();
                 this.Hide();

@@ -131,7 +131,14 @@ namespace Software
 
         private void CoverPage_FormClosing(object sender, FormClosingEventArgs e)
         {
+            LoginTemp lt = (LoginTemp)Application.OpenForms["LoginTemp"];
+            if (lt != null)
+            {
+                lt.Close();
+                lt.Dispose();
+            }
             this.Dispose();
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -162,14 +169,14 @@ namespace Software
         private void btnAchvmnt_Click(object sender, EventArgs e)
         {
 
-            Record rc = (Record)Application.OpenForms["Record"];
+            Achivements rc = (Achivements)Application.OpenForms["Record"];
             if (rc != null)
             {
                 rc.TopMost = true;
             }
             else
             {
-                Record rcn = new Record();
+                Achivements rcn = new Achivements();
                 rcn.Show();
             }
         }

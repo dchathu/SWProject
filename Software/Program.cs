@@ -16,7 +16,7 @@ namespace Software
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginTemp());
+            Application.Run(new CoverPage());
         }
     }
 }
