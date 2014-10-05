@@ -39,6 +39,8 @@ namespace Software
             if (dt.Rows.Count == 1)
             {
                 Properties.Settings.Default.User = getuser;
+                Properties.Settings.Default.UserType = dt.Rows[0].ItemArray[3].ToString().Trim();
+                MessageBox.Show(Properties.Settings.Default.UserType.ToString());
                 CoverPage cs = new CoverPage();
                 cs.Show();
                 this.Hide();
@@ -88,18 +90,7 @@ namespace Software
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string user = txtUser.Text.ToString().Trim();
-            string pass = txtPass.Text.ToString().Trim();
-
-            string encrypted=hashPass(pass,user);
-
-            con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Login (Username,Password,UserType) VALUES (@user,@passEnc,'Admin')", con);
-            cmd.Parameters.AddWithValue("@user", user);
-            cmd.Parameters.AddWithValue("@passEnc", encrypted);
-
-            cmd.ExecuteNonQuery();
-            con.Close();
+            
         }
 
         private string hashPass(string pass,string user)

@@ -91,5 +91,17 @@ namespace Software.Properties {
                 this["User"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserType {
+            get {
+                return ((string)(this["UserType"]));
+            }
+            set {
+                this["UserType"] = value;
+            }
+        }
     }
 }

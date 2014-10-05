@@ -96,6 +96,8 @@ namespace Software
         
         private void CoverPage_Load(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.UserType == "Admin")
+                lnkManageusers.Visible = true;
             lblUserName.Text = Properties.Settings.Default.User.ToString();
             dtpEn.Value = DateTime.Today.AddMonths(+1);
             dtpSt.Value = DateTime.Today.AddDays(-1);
@@ -242,6 +244,20 @@ namespace Software
         private void button9_Click(object sender, EventArgs e)
         {
             LoadEvents(dtpSt.Value, dtpEn.Value);
+        }
+
+        private void lnkManageusers_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ManageUsers mu = (ManageUsers)Application.OpenForms["ManageUsers"];
+            if (mu != null)
+            {
+                mu.TopMost = true;
+            }
+            else
+            {
+                ManageUsers mun = new ManageUsers();
+                mun.Show();
+            }
         }       
     }
 }

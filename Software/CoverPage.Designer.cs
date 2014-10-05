@@ -74,6 +74,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.lnkManageusers = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -144,6 +145,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.lnkManageusers);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -656,6 +658,19 @@
             this.lblUserName.TabIndex = 9;
             this.lblUserName.Text = "User";
             // 
+            // lnkManageusers
+            // 
+            this.lnkManageusers.AutoSize = true;
+            this.lnkManageusers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkManageusers.Location = new System.Drawing.Point(894, 72);
+            this.lnkManageusers.Name = "lnkManageusers";
+            this.lnkManageusers.Size = new System.Drawing.Size(100, 17);
+            this.lnkManageusers.TabIndex = 52;
+            this.lnkManageusers.TabStop = true;
+            this.lnkManageusers.Text = "Manage Users";
+            this.lnkManageusers.Visible = false;
+            this.lnkManageusers.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkManageusers_LinkClicked);
+            // 
             // CoverPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -672,6 +687,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CoverPage_FormClosing);
             this.Load += new System.EventHandler(this.CoverPage_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -754,5 +770,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel lnkManageusers;
     }
 }
