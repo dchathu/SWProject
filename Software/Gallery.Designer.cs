@@ -45,10 +45,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkBlue;
+            this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(13, 36);
             this.button1.Name = "button1";
@@ -80,7 +79,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.albumsDataGridView);
             this.Name = "Gallery";
-            this.Text = "Form4";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.Gallery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.albumsDataGridView)).EndInit();
             this.ResumeLayout(false);

@@ -26,9 +26,14 @@ namespace Software
         {
             if (num < len - 1)
                 pictureBox1.Image = PhotoViewer.pic[++num].Image;
-            else
+            else if(num==len-1)
             {
                 num = len - 2;
+                button2.Enabled = false;
+                button1.Enabled = true;
+            }
+            else
+            {
                 button2.Enabled = false;
                 button1.Enabled = true;
             }
@@ -38,9 +43,14 @@ namespace Software
         {
             if (num > -1)
                 pictureBox1.Image = PhotoViewer.pic[num--].Image;
-            else
+            else if(num==-1)
             {
                 num = 0;
+                button1.Enabled = false;
+                button2.Enabled = true;
+            }
+            else
+            {
                 button1.Enabled = false;
                 button2.Enabled = true;
             }
