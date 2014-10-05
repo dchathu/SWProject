@@ -1139,7 +1139,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Plantagenet Cherokee", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(595, 436);
+            this.button6.Location = new System.Drawing.Point(590, 433);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(102, 43);
             this.button6.TabIndex = 73;
@@ -1151,24 +1151,24 @@
             // 
             this.comboBox10.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox10.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox10.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox10.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
             "Male",
             "Female"});
             this.comboBox10.Location = new System.Drawing.Point(528, 322);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 23);
+            this.comboBox10.Size = new System.Drawing.Size(121, 22);
             this.comboBox10.TabIndex = 60;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Location = new System.Drawing.Point(455, 325);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 22);
+            this.label10.Size = new System.Drawing.Size(48, 15);
             this.label10.TabIndex = 59;
             this.label10.Text = "Gender";
             // 
@@ -1176,7 +1176,7 @@
             // 
             this.comboBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox9.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Items.AddRange(new object[] {
             "Sinhala",
@@ -1184,17 +1184,17 @@
             "Other"});
             this.comboBox9.Location = new System.Drawing.Point(211, 381);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 23);
+            this.comboBox9.Size = new System.Drawing.Size(121, 22);
             this.comboBox9.TabIndex = 58;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(66, 381);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 22);
+            this.label9.Size = new System.Drawing.Size(105, 15);
             this.label9.TabIndex = 57;
             this.label9.Text = "Mother Language";
             // 
@@ -1202,7 +1202,7 @@
             // 
             this.comboBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox8.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
             "Buddhism",
@@ -1211,17 +1211,17 @@
             "Christianity"});
             this.comboBox8.Location = new System.Drawing.Point(211, 325);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 23);
+            this.comboBox8.Size = new System.Drawing.Size(121, 22);
             this.comboBox8.TabIndex = 56;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(130, 325);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 22);
+            this.label8.Size = new System.Drawing.Size(53, 15);
             this.label8.TabIndex = 55;
             this.label8.Text = "Religion";
             // 
@@ -1229,7 +1229,7 @@
             // 
             this.comboBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox7.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "Rev",
@@ -1238,26 +1238,26 @@
             "Mrs"});
             this.comboBox7.Location = new System.Drawing.Point(211, 98);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 23);
+            this.comboBox7.Size = new System.Drawing.Size(121, 22);
             this.comboBox7.TabIndex = 54;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTitle.Location = new System.Drawing.Point(154, 98);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(45, 22);
+            this.lblTitle.Size = new System.Drawing.Size(30, 15);
             this.lblTitle.TabIndex = 52;
             this.lblTitle.Text = "Title";
             // 
             // txtRegNo
             // 
-            this.txtRegNo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegNo.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegNo.Location = new System.Drawing.Point(211, 257);
             this.txtRegNo.Name = "txtRegNo";
-            this.txtRegNo.Size = new System.Drawing.Size(190, 23);
+            this.txtRegNo.Size = new System.Drawing.Size(190, 20);
             this.txtRegNo.TabIndex = 50;
             this.txtRegNo.TextChanged += new System.EventHandler(this.txtRegNo_TextChanged);
             this.txtRegNo.Leave += new System.EventHandler(this.txtRegNo_Leave);
@@ -1266,11 +1266,11 @@
             // lblRegNo
             // 
             this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegNo.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRegNo.Location = new System.Drawing.Point(81, 264);
             this.lblRegNo.Name = "lblRegNo";
-            this.lblRegNo.Size = new System.Drawing.Size(134, 22);
+            this.lblRegNo.Size = new System.Drawing.Size(92, 15);
             this.lblRegNo.TabIndex = 49;
             this.lblRegNo.Text = "Registration No";
             // 
@@ -1287,39 +1287,39 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(211, 208);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(443, 23);
+            this.txtLastName.Size = new System.Drawing.Size(443, 20);
             this.txtLastName.TabIndex = 24;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(211, 155);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(443, 23);
+            this.txtFirstName.Size = new System.Drawing.Size(443, 20);
             this.txtFirstName.TabIndex = 22;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLastName.Location = new System.Drawing.Point(109, 213);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(96, 22);
+            this.lblLastName.Size = new System.Drawing.Size(67, 15);
             this.lblLastName.TabIndex = 23;
             this.lblLastName.Text = "Last Name";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblFirstName.Location = new System.Drawing.Point(109, 160);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(97, 22);
+            this.lblFirstName.Size = new System.Drawing.Size(67, 15);
             this.lblFirstName.TabIndex = 21;
             this.lblFirstName.Text = "First Name";
             // 
